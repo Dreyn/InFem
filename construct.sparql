@@ -1,31 +1,32 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX ex: <http://ex.org/a#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX dbo: <http://dbpedia.org/ontology/>
 PREFIX dbf: <http://fr.dbpedia.org/resource/>
 PREFIX foaf: <http://xmlns.com/foaf/0.1/>
-PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX swpo: <http://sw-portal.deri.org/ontologies/swportal#>
 
 CONSTRUCT {
-  dbo:EducationalInstitution rdfs:subClassOf dbo:Organisation.
-
   ?URI a dbo:Event;
     foaf:name ?Dispositif;
     dbo:status ?Etat;
-    dbo:Place [ rdf:type dbo:EducationalInstitution;
-				dbf:Region ?Region;
-				dbf:Academie ?VilleCC;
-				dbf:Ville ?Ville;
-				foaf:name ?NomEtab];
+    swpo:hasLocation [ 
+				rdf:type dbo:EducationalInstitution ;
+				foaf:name ?NomEtab;
+				swpo:hasLocation [ dbo:City ?VilleCC;
+									dbf:Departement ?Departement;
+									dbf:Region ?Region
+								]
+				];
     foaf:Person [foaf:name ?Contact;
 				foaf:name ?Contact2;
 				foaf:email ?Email;
 				foaf:email ?AutreEmail;
 				foaf:website ?Site;
-				foaf:role ?Role;] .
+				foaf:role ?Role].
 }
 FROM <fr-esr-initiatives-pour-la-lutte-contre-les-violences-sexistes-et-sexuelles_bis.csv>
 WHERE {
   BIND (URI(?UAI) AS ?URI)
-  BIND (xsd:string(?Academie) AS ?VilleCC)
+  BIND (xsd:string(?Ville) AS ?VilleCC)
 }
