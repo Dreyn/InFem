@@ -1,0 +1,61 @@
+@prefix dbo:  <http://dbpedia.org/ontology/> .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#'> .
+@prefix db:  <http://dbpedia.org/resource/> .
+@prefix dbf:  <http://dbpedia.org/resource/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix schema: <http://schema.org/> .
+@prefix swpo: <http://sw-portal.deri.org/ontologies/swportal#> .
+
+########  Ontologies #########
+dbo:Event rdf:type owl:Class ;
+          owl:disjointWith dbo:Person ;
+          owl:equivalentClass schema:Event .
+
+dbo:Place owl:equivalentClass dbo:Location .
+
+dbo:EducationalInstitution rdf:type owl:Class ;
+                           rdfs:subClassOf dbo:Organisation ;
+                           rdfs:subClassOf dbo:Place ;
+                           owl:equivalentClass schema:EducationalOrganization .
+
+dbo:School rdfs:subClassOf dbo:EducationalInstitution .
+dbo:College rdfs:subClassOf dbo:EducationalInstitution .
+dbo:Library rdfs:subClassOf dbo:EducationalInstitution .
+dbo:University rdfs:subClassOf dbo:EducationalInstitution .
+
+foaf:Person rdfs:subClassOf foaf:Agent ;
+            rdf:type dbo:Person .
+
+swpo:hasLocation rdf:type owl:ObjectProperty ;
+                 rdfs:domain dbo:Event ;
+                 rdfs:range dbo:Place .
+
+###### Équivalences #####
+
+db:City owl:sameAs dbf:Ville .
+
+dbo:EducationalInstitution owl:equivalentClass schema:EducationalOrganization .
+
+dbf:Departement owl:sameAs dbf:D%C3%A9partement ;
+                owl:sameAs <http://be.dbpedia.org/resource/Дэпартамент> ;
+                owl:sameAs <http://ca.dbpedia.org/resource/Departament> ;
+                owl:sameAs <http://eo.dbpedia.org/resource/Departemento> ;
+                owl:sameAs <http://et.dbpedia.org/resource/Departemang> ;
+                owl:sameAs <http://eu.dbpedia.org/resource/Departamendu> ;
+                owl:sameAs <http://hr.dbpedia.org/resource/Departman> ;
+                owl:sameAs <http://hy.dbpedia.org/resource/Դեպարտամենտ_(տարածքային_միավոր)> ;
+                owl:sameAs <http://id.dbpedia.org/resource/Departemen_(pembagian_negara)> ;
+                owl:sameAs <http://uk.dbpedia.org/resource/Департамент> ;
+                owl:sameAs <http://dbpedia.org/resource/Department_(country_subdivision)> .
+
+dbf:Region owl:sameAs dbf:R%C3%A9gion ;
+            owl:sameAs <http://eo.dbpedia.org/resource/Regiono>
+            owl:sameAs <http://zh.dbpedia.org/resource/地方> ;
+            owl:sameAs <http://sr.dbpedia.org/resource/Region_(višeznačna_odrednica)> ;
+            owl:sameAs <http://sk.dbpedia.org/resource/Región> ;
+            owl:sameAs <http://id.dbpedia.org/resource/Regional> ;
+            owl:sameAs <http://dbpedia.org/page/Region_(disambiguation)> .
+
+foaf:Person owl:sameAs schema:Person .
