@@ -3,6 +3,7 @@ PREFIX ex: <http://ex.org/a#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX dbo: <http://dbpedia.org/ontology/>
 PREFIX dbf: <http://fr.dbpedia.org/resource/>
+PREFIX db: <http://dbpedia.org/resource/>
 PREFIX foaf: <http://xmlns.com/foaf/0.1/>
 PREFIX swpo: <http://sw-portal.deri.org/ontologies/swportal#>
 
@@ -13,7 +14,7 @@ CONSTRUCT {
     swpo:hasLocation [ 
 				rdf:type dbo:EducationalInstitution ;
 				foaf:name ?NomEtab;
-				swpo:hasLocation [ dbo:City ?VilleCC;
+				swpo:hasLocation [ db:City ?VilleCC;
 									dbf:Departement ?Departement;
 									dbf:Region ?Region
 								]
