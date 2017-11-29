@@ -1,0 +1,959 @@
+@prefix dbo:  <http://dbpedia.org/ontology/> .
+@prefix ex:  <http://ex.org/a#> .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+@prefix dbf:  <http://fr.dbpedia.org/resource/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+dbo:EducationalInstitution
+        rdfs:subClassOf  dbo:Organisation .
+
+<0762762P>  rdf:type  dbo:Event ;
+        dbo:status  "En cours" ;
+        dbo:Place   _:b0 .
+
+_:b0    rdf:type      dbo:EducationalInstitution ;
+        dbf:Region    "Normandie" ;
+        dbf:Academie  "Rouen" ;
+        dbf:Ville     "Le Havre" ;
+        foaf:name     "Université du Havre" .
+
+<0762762P>  foaf:Person  _:b1 .
+
+_:b1    foaf:name   "Clare Ramsbottom" ;
+        foaf:email  "clare.ramsbottom@univ-lehavre.fr" ;
+        foaf:role   "Vice-Présidente déléguée en charge de la responsabilité sociale de l'université, référente égalité hommes-femmes, racisme et antisémitisme" .
+
+dbo:EducationalInstitution
+        rdfs:subClassOf  dbo:Organisation .
+
+<0751721N>  rdf:type  dbo:Event ;
+        foaf:name   "Université Sorbonne Paris-Cité - Institut en santé Génésique (USPC-ISG)" ;
+        dbo:status  "Mis en place" ;
+        dbo:Place   _:b2 .
+
+_:b2    rdf:type      dbo:EducationalInstitution ;
+        dbf:Region    "Île-de-France" ;
+        dbf:Academie  "Paris" ;
+        dbf:Ville     "Paris 6e" ;
+        foaf:name     "Université Paris Descartes" .
+
+<0751721N>  foaf:Person  _:b3 .
+
+_:b3    foaf:name   "Séverine Lemière" ;
+        foaf:email  "severine.lemiere@parisdescartes.fr" ;
+        foaf:role   "Chargée de mission égalité" .
+
+dbo:EducationalInstitution
+        rdfs:subClassOf  dbo:Organisation .
+
+<0753431X>  rdf:type  dbo:Event ;
+        foaf:name   "Cellule de veille sur le harcèlement sexuel" ;
+        dbo:status  "Mis en place" ;
+        dbo:Place   _:b4 .
+
+_:b4    rdf:type      dbo:EducationalInstitution ;
+        dbf:Region    "Île-de-France" ;
+        dbf:Academie  "Paris" ;
+        dbf:Ville     "Paris 7e" ;
+        foaf:name     "Institut d'études politiques de Paris" .
+
+<0753431X>  foaf:Person  _:b5 .
+
+_:b5    foaf:name   "Régine Serra" ;
+        foaf:email  "harcelement.sexuel@sciencespo.fr" ;
+        foaf:email  "sexual.harassment@sciencespo.fr" ;
+        foaf:role   "Référente Egalité Femmes-Hommes / Gender Equality Officer" .
+
+dbo:EducationalInstitution
+        rdfs:subClassOf  dbo:Organisation .
+
+<0593561A>  rdf:type  dbo:Event ;
+        foaf:name   "Cellule de Veille et d'Information sur le Harcèlement Sexuel (CEVIHS)" ;
+        dbo:status  "Mis en place" ;
+        dbo:Place   _:b6 .
+
+_:b6    rdf:type      dbo:EducationalInstitution ;
+        dbf:Region    "Hauts-de-France" ;
+        dbf:Academie  "Lille" ;
+        dbf:Ville     "Villeneuve-d'Ascq" ;
+        foaf:name     "Université Lille 3 - Charles-de-Gaulle" .
+
+<0593561A>  foaf:Person  _:b7 .
+
+_:b7    foaf:email  "cevihs@univ-lille3.fr" .
+
+dbo:EducationalInstitution
+        rdfs:subClassOf  dbo:Organisation .
+
+<0350937D>  rdf:type  dbo:Event ;
+        dbo:status  "Mis en place" ;
+        dbo:Place   _:b8 .
+
+_:b8    rdf:type      dbo:EducationalInstitution ;
+        dbf:Region    "Bretagne" ;
+        dbf:Academie  "Rennes" ;
+        dbf:Ville     "Rennes" ;
+        foaf:name     "Université Rennes 2" .
+
+<0350937D>  foaf:Person  _:b9 .
+
+_:b9    foaf:name  "Christine RIVALAN-GUEGO" ;
+        foaf:role  "Vice-présidente en charge de l'égalité" .
+
+dbo:EducationalInstitution
+        rdfs:subClassOf  dbo:Organisation .
+
+<0860856N>  rdf:type  dbo:Event ;
+        dbo:status  "En cours" ;
+        dbo:Place   _:b10 .
+
+_:b10   rdf:type      dbo:EducationalInstitution ;
+        dbf:Region    "Nouvelle-Aquitaine" ;
+        dbf:Academie  "Poitiers" ;
+        dbf:Ville     "Poitiers" ;
+        foaf:name     "Université de Poitiers" .
+
+<0860856N>  foaf:Person  _:b11 .
+
+_:b11   foaf:name   "Stéphane Bikialo" ;
+        foaf:email  "stephane.bikialo@univ-poitiers.fr" ;
+        foaf:role   "Vice-Président à l'égalité femme-homme" .
+
+dbo:EducationalInstitution
+        rdfs:subClassOf  dbo:Organisation .
+
+<0350095N>  rdf:type  dbo:Event ;
+        foaf:name   "Groupe de travail \"prévention et lutte contre le harcèlement au travail\" depuis avril 2016." ;
+        dbo:status  "En cours" ;
+        dbo:Place   _:b12 .
+
+_:b12   rdf:type      dbo:EducationalInstitution ;
+        dbf:Region    "Bretagne" ;
+        dbf:Academie  "Rennes" ;
+        dbf:Ville     "Rennes" ;
+        foaf:name     "École des hautes études en santé publique" .
+
+<0350095N>  foaf:Person  _:b13 .
+
+_:b13   foaf:name   "Nicoleta Bakhos" ;
+        foaf:email  "nicoleta.bakhos@ehesp.fr" ;
+        foaf:role   "Référente Egalité femmes-hommes à l’EHESP" .
+
+dbo:EducationalInstitution
+        rdfs:subClassOf  dbo:Organisation .
+
+<0350077U>  rdf:type  dbo:Event ;
+        dbo:status  "En cours" ;
+        dbo:Place   _:b14 .
+
+_:b14   rdf:type      dbo:EducationalInstitution ;
+        dbf:Region    "Bretagne" ;
+        dbf:Academie  "Rennes" ;
+        dbf:Ville     "Rennes" ;
+        foaf:name     "École nationale supérieure de chimie de Rennes" .
+
+<0350077U>  foaf:Person  _:b15 .
+
+_:b15   foaf:name  "Audrey Deniccurt-Nowicki" .
+
+dbo:EducationalInstitution
+        rdfs:subClassOf  dbo:Organisation .
+
+_:b16   rdf:type   dbo:EducationalInstitution ;
+        foaf:name  "Centre National de la Recherche Scientifique" .
+
+_:b17   foaf:name   "Anne Pépin" ;
+        foaf:email  "mission.femmes@cnrs.fr" ;
+        foaf:role   "Directrice de la Mission pour la place des femmes au CNRS" .
+
+dbo:EducationalInstitution
+        rdfs:subClassOf  dbo:Organisation .
+
+<0331766R>  rdf:type  dbo:Event ;
+        foaf:name   "Cellules de veille contre le harcèlement sexuel, les violences sexistes et homophobes (CEVH) depuis 2013, dispositif conjoint avec l'université de Bordeaux." ;
+        dbo:status  "Mis en place" ;
+        dbo:Place   _:b18 .
+
+_:b18   rdf:type      dbo:EducationalInstitution ;
+        dbf:Region    "Nouvelle-Aquitaine" ;
+        dbf:Academie  "Bordeaux" ;
+        dbf:Ville     "Pessac" ;
+        foaf:name     "Université Bordeaux-Montaigne" .
+
+<0331766R>  foaf:Person  _:b19 .
+
+_:b19   foaf:name   "Marion Paoletti" ;
+        foaf:email  "cevhs@u-bordeaux.fr" ;
+        foaf:role   "Chargée de mission égalité femmes-hommes" .
+
+dbo:EducationalInstitution
+        rdfs:subClassOf  dbo:Organisation .
+
+<0623957P>  rdf:type  dbo:Event ;
+        dbo:status  "En cours" ;
+        dbo:Place   _:b20 .
+
+_:b20   rdf:type      dbo:EducationalInstitution ;
+        dbf:Region    "Hauts-de-France" ;
+        dbf:Academie  "Lille" ;
+        dbf:Ville     "Arras" ;
+        foaf:name     "Université d'Artois" .
+
+<0623957P>  foaf:Person  _:b21 .
+
+dbo:EducationalInstitution
+        rdfs:subClassOf  dbo:Organisation .
+
+<0840685N>  rdf:type  dbo:Event ;
+        dbo:status  "En réflexion" ;
+        dbo:Place   _:b22 .
+
+_:b22   rdf:type      dbo:EducationalInstitution ;
+        dbf:Region    "Provence-Alpes-Côte d'Azur" ;
+        dbf:Academie  "Aix-Marseille" ;
+        dbf:Ville     "Avignon" ;
+        foaf:name     "Université d'Avignon et des Pays de Vaucluse" .
+
+<0840685N>  foaf:Person  _:b23 .
+
+_:b23   foaf:name   "Samuel Priso-Essawe" ;
+        foaf:email  "vice-president-egalite@univ-avignon.fr" ;
+        foaf:role   "Vice-président à l'égalité" .
+
+dbo:EducationalInstitution
+        rdfs:subClassOf  dbo:Organisation .
+
+<0342321N>  rdf:type  dbo:Event ;
+        foaf:name   "Cellule \"Veille et attention\"" ;
+        dbo:status  "Mis en place" ;
+        dbo:Place   _:b24 .
+
+_:b24   rdf:type      dbo:EducationalInstitution ;
+        dbf:Region    "Occitanie" ;
+        dbf:Academie  "Montpellier" ;
+        dbf:Ville     "Montpellier" ;
+        foaf:name     "Université de Montpellier" .
+
+<0342321N>  foaf:Person  _:b25 .
+
+_:b25   foaf:name   "Agnès Fichard-Carroll" ;
+        foaf:email  "agnes.fichard-carroll@univ-montp2.fr" ;
+        foaf:role   "Chargée de mission égalité" .
+
+dbo:EducationalInstitution
+        rdfs:subClassOf  dbo:Organisation .
+
+<0060931E>  rdf:type  dbo:Event ;
+        dbo:status  "En cours" ;
+        dbo:Place   _:b26 .
+
+_:b26   rdf:type      dbo:EducationalInstitution ;
+        dbf:Region    "Provence-Alpes-Côte d'Azur" ;
+        dbf:Academie  "Nice" ;
+        dbf:Ville     "Nice" ;
+        foaf:name     "Université Nice - Sophia-Antipolis" .
+
+<0060931E>  foaf:Person  _:b27 .
+
+_:b27   foaf:name   "Emilie Souyri" ;
+        foaf:email  "mission-parite@unice.fr" ;
+        foaf:role   "Chargé-e-s de mission Egalité Femmes-Hommes" .
+
+dbo:EducationalInstitution
+        rdfs:subClassOf  dbo:Organisation .
+
+<0542493S>  rdf:type  dbo:Event ;
+        dbo:status  "En cours" ;
+        dbo:Place   _:b28 .
+
+_:b28   rdf:type      dbo:EducationalInstitution ;
+        dbf:Region    "Grand Est" ;
+        dbf:Academie  "Nancy-Metz" ;
+        dbf:Ville     "Nancy" ;
+        foaf:name     "Université de Lorraine" .
+
+<0542493S>  foaf:Person  _:b29 .
+
+_:b29   foaf:name  "Frédéric Mouzaoui" .
+
+dbo:EducationalInstitution
+        rdfs:subClassOf  dbo:Organisation .
+
+<0772765M>  rdf:type  dbo:Event ;
+        dbo:status  "En réflexion" ;
+        dbo:Place   _:b30 .
+
+_:b30   rdf:type      dbo:EducationalInstitution ;
+        dbf:Region    "Île-de-France" ;
+        dbf:Academie  "Créteil" ;
+        dbf:Ville     "Champs-sur-Marne" ;
+        foaf:name     "Institut français des sciences et technologies des transports, de l'aménagement et des réseaux" .
+
+<0772765M>  foaf:Person  _:b31 .
+
+_:b31   foaf:name   "Eric Gelineau" ;
+        foaf:email  "eric.gelineau@ifsttar.fr" ;
+        foaf:role   "Référent égalité professionnelle" .
+
+dbo:EducationalInstitution
+        rdfs:subClassOf  dbo:Organisation .
+
+<0751722P>  rdf:type  dbo:Event ;
+        dbo:status  "Mis en place" ;
+        dbo:Place   _:b32 .
+
+_:b32   rdf:type      dbo:EducationalInstitution ;
+        dbf:Region    "Île-de-France" ;
+        dbf:Academie  "Paris" ;
+        dbf:Ville     "Paris 5e" ;
+        foaf:name     "Université Pierre et Marie Curie" .
+
+<0751722P>  foaf:Person  _:b33 .
+
+_:b33   foaf:name   "Hélène Gérard" ;
+        foaf:email  "helene.gerard@upmc.fr" ;
+        foaf:role   "Chargée de mission Parité" .
+
+dbo:EducationalInstitution
+        rdfs:subClassOf  dbo:Organisation .
+
+<0350097R>  rdf:type  dbo:Event ;
+        foaf:name   "Cellule d'accompagnement (destinée aux personnels)" ;
+        dbo:status  "En cours" ;
+        dbo:Place   _:b34 .
+
+_:b34   rdf:type      dbo:EducationalInstitution ;
+        dbf:Region    "Bretagne" ;
+        dbf:Academie  "Rennes" ;
+        dbf:Ville     "Rennes" ;
+        foaf:name     "Institut national des sciences appliquées de Rennes" .
+
+<0350097R>  foaf:Person  _:b35 .
+
+dbo:EducationalInstitution
+        rdfs:subClassOf  dbo:Organisation .
+
+<0593559Y>  rdf:type  dbo:Event ;
+        foaf:name   "Cellule de prévention et de conseils contre les harcèlements" ;
+        dbo:status  "Mis en place" ;
+        dbo:Place   _:b36 .
+
+_:b36   rdf:type      dbo:EducationalInstitution ;
+        dbf:Region    "Hauts-de-France" ;
+        dbf:Academie  "Lille" ;
+        dbf:Ville     "Villeneuve-d'Ascq" ;
+        foaf:name     "Université Lille 1 - Sciences technologies" .
+
+<0593559Y>  foaf:Person  _:b37 .
+
+_:b37   foaf:name   "Christel BEAUCOURT" ;
+        foaf:email  "cellule-harcelements@univ-lille1.fr" ;
+        foaf:email  "sexismepasnotregenre@univ-lille1.fr" ;
+        foaf:role   "Chargée de mission Egalité Femmes-Hommes et Responsabilité Sociale" .
+
+dbo:EducationalInstitution
+        rdfs:subClassOf  dbo:Organisation .
+
+<0692437Z>  rdf:type  dbo:Event ;
+        foaf:name   "Groupe de travail sur la question du harcèlement sexuel suite à la définition d'une politique de lutte contre le harcèlement sexuel comme axe n°1 du plan d'action de la mission égalité proposée au printemps 2016." ;
+        dbo:status  "En cours" ;
+        dbo:Place   _:b38 .
+
+_:b38   rdf:type      dbo:EducationalInstitution ;
+        dbf:Region    "Auvergne-Rhône-Alpes" ;
+        dbf:Academie  "Lyon" ;
+        dbf:Ville     "Lyon 7e" ;
+        foaf:name     "Université Jean Moulin - Lyon 3" .
+
+<0692437Z>  foaf:Person  _:b39 .
+
+_:b39   foaf:name   "Marion Girer" ;
+        foaf:email  "m.girer77@gmail.com" ;
+        foaf:role   "Chargée de mission égalité femmes-hommes" .
+
+dbo:EducationalInstitution
+        rdfs:subClassOf  dbo:Organisation .
+
+<0440100V>  rdf:type  dbo:Event ;
+        foaf:name   "Protocole de signalement des risques psychosociaux (à destination des personnels)." ;
+        dbo:status  "En cours" ;
+        dbo:Place   _:b40 .
+
+_:b40   rdf:type      dbo:EducationalInstitution ;
+        dbf:Region    "Pays de la Loire" ;
+        dbf:Academie  "Nantes" ;
+        foaf:name     "Ecole centrale de Nantes" .
+
+<0440100V>  foaf:Person  _:b41 .
+
+_:b41   foaf:name   "Annabelle Wajs" ;
+        foaf:email  "annabelle.wajs@ec-nantes.fr" ;
+        foaf:role   "Chargée de mission égalité" .
+
+dbo:EducationalInstitution
+        rdfs:subClassOf  dbo:Organisation .
+
+<0141720U>  rdf:type  dbo:Event ;
+        dbo:status  "En réflexion" ;
+        dbo:Place   _:b42 .
+
+_:b42   rdf:type      dbo:EducationalInstitution ;
+        dbf:Region    "Normandie" ;
+        dbf:Academie  "Caen" ;
+        dbf:Ville     "Caen" ;
+        foaf:name     "École nationale supérieure d'ingénieurs de Caen" .
+
+<0141720U>  foaf:Person  _:b43 .
+
+dbo:EducationalInstitution
+        rdfs:subClassOf  dbo:Organisation .
+
+<0381912X>  rdf:type  dbo:Event ;
+        dbo:status  "En cours" ;
+        dbo:Place   _:b44 .
+
+_:b44   rdf:type      dbo:EducationalInstitution ;
+        dbf:Region    "Auvergne-Rhône-Alpes" ;
+        dbf:Academie  "Grenoble" ;
+        dbf:Ville     "Grenoble" ;
+        foaf:name     "Grenoble INP" .
+
+<0381912X>  foaf:Person  _:b45 .
+
+_:b45   foaf:name   "Isabelle Schanen" ;
+        foaf:email  "isabelle.schanen@grenoble-inp.fr" ;
+        foaf:role   "Chargée de mission Equité homme/femme" .
+
+dbo:EducationalInstitution
+        rdfs:subClassOf  dbo:Organisation .
+
+<0694123G>  rdf:type  dbo:Event ;
+        dbo:status  "En réflexion" ;
+        dbo:Place   _:b46 .
+
+_:b46   rdf:type      dbo:EducationalInstitution ;
+        dbf:Region    "Auvergne-Rhône-Alpes" ;
+        dbf:Academie  "Lyon" ;
+        dbf:Ville     "Lyon 7e" ;
+        foaf:name     "École normale supérieure de Lyon" .
+
+<0694123G>  foaf:Person  _:b47 .
+
+_:b47   foaf:name   "Christine Détrez" ;
+        foaf:name   "Sophie Fermigier" ;
+        foaf:email  "sophie.fermigier@ens-lyon.fr" ;
+        foaf:email  "christine.detrez@ens-lyon.fr" ;
+        foaf:role   "Référentes égalité" .
+
+dbo:EducationalInstitution
+        rdfs:subClassOf  dbo:Organisation .
+
+<0751719L>  rdf:type  dbo:Event ;
+        foaf:name   "Université Sorbonne Paris-Cité - Institut en santé Génésique (USPC-ISG)" ;
+        dbo:status  "Mis en place" ;
+        dbo:Place   _:b48 .
+
+_:b48   rdf:type      dbo:EducationalInstitution ;
+        dbf:Region    "Île-de-France" ;
+        dbf:Academie  "Paris" ;
+        dbf:Ville     "Paris 5e" ;
+        foaf:name     "Université Sorbonne Nouvelle - Paris 3" .
+
+<0751719L>  foaf:Person  _:b49 .
+
+_:b49   foaf:name   "Marie-Soledad RODRIGUEZ" ;
+        foaf:email  "egalite.fh@univ-paris3.fr" ;
+        foaf:role   "Chargée de mission pour l'égalité femmes-hommes" .
+
+dbo:EducationalInstitution
+        rdfs:subClassOf  dbo:Organisation .
+
+<0751723R>  rdf:type  dbo:Event ;
+        foaf:name   "Université Sorbonne Paris-Cité - Institut en santé Génésique (USPC-ISG)" ;
+        dbo:status  "Mis en place" ;
+        dbo:Place   _:b50 .
+
+_:b50   rdf:type      dbo:EducationalInstitution ;
+        dbf:Region    "Île-de-France" ;
+        dbf:Academie  "Paris" ;
+        dbf:Ville     "Paris 13e" ;
+        foaf:name     "Université Paris Diderot" .
+
+<0751723R>  foaf:Person  _:b51 .
+
+dbo:EducationalInstitution
+        rdfs:subClassOf  dbo:Organisation .
+
+<0940607Z>  rdf:type  dbo:Event ;
+        dbo:status  "Mis en place" ;
+        dbo:Place   _:b52 .
+
+_:b52   rdf:type      dbo:EducationalInstitution ;
+        dbf:Region    "Île-de-France" ;
+        dbf:Academie  "Créteil" ;
+        dbf:Ville     "Cachan" ;
+        foaf:name     "École normale supérieure de Cachan" .
+
+<0940607Z>  foaf:Person  _:b53 .
+
+_:b53   foaf:name   "Sarah Boratav" ;
+        foaf:name   "Pascale Rialland" ;
+        foaf:email  "sarah.boratav@universite-paris-saclay.fr" ;
+        foaf:role   "Cheffe de projet Egalité-Diversité ; Chargée de mission parité" .
+
+dbo:EducationalInstitution
+        rdfs:subClassOf  dbo:Organisation .
+
+<0681166Y>  rdf:type  dbo:Event ;
+        dbo:status  "En cours" ;
+        dbo:Place   _:b54 .
+
+_:b54   rdf:type      dbo:EducationalInstitution ;
+        dbf:Region    "Grand Est" ;
+        dbf:Academie  "Strasbourg" ;
+        dbf:Ville     "Mulhouse" ;
+        foaf:name     "Université de Haute-Alsace" .
+
+<0681166Y>  foaf:Person  _:b55 .
+
+_:b55   foaf:name   "Evelyne Aubry" ;
+        foaf:email  "evelyne.aubry@uha.fr" ;
+        foaf:role   "Référente Egalité" .
+
+dbo:EducationalInstitution
+        rdfs:subClassOf  dbo:Organisation .
+
+<0350936C>  rdf:type  dbo:Event ;
+        dbo:status  "Mis en place" ;
+        dbo:Place   _:b56 .
+
+_:b56   rdf:type      dbo:EducationalInstitution ;
+        dbf:Region    "Bretagne" ;
+        dbf:Academie  "Rennes" ;
+        dbf:Ville     "Rennes" ;
+        foaf:name     "Université de Rennes 1" .
+
+<0350936C>  foaf:Person  _:b57 .
+
+dbo:EducationalInstitution
+        rdfs:subClassOf  dbo:Organisation .
+
+<0781944P>  rdf:type  dbo:Event ;
+        dbo:status  "En cours" ;
+        dbo:Place   _:b58 .
+
+_:b58   rdf:type      dbo:EducationalInstitution ;
+        dbf:Region    "Île-de-France" ;
+        dbf:Academie  "Versailles" ;
+        dbf:Ville     "Versailles" ;
+        foaf:name     "Université de Versailles Saint-Quentin-en-Yvelines" .
+
+<0781944P>  foaf:Person  _:b59 .
+
+_:b59   foaf:name   "Armel Dubois-Nayt" ;
+        foaf:email  "dubois-nayt@iut-velizy.uvsq.fr" ;
+        foaf:role   "Chargée de mission parité-égalité réelle" .
+
+dbo:EducationalInstitution
+        rdfs:subClassOf  dbo:Organisation .
+
+<0370800U>  rdf:type  dbo:Event ;
+        dbo:status  "Mis en place" ;
+        dbo:Place   _:b60 .
+
+_:b60   rdf:type      dbo:EducationalInstitution ;
+        dbf:Region    "Centre-Val de Loire" ;
+        dbf:Academie  "Orléans-Tours" ;
+        foaf:name     "Université François-Rabelais" .
+
+<0370800U>  foaf:Person  _:b61 .
+
+_:b61   foaf:name   "Concetta Pennuto" ;
+        foaf:email  "concetta.pennuto@univ-tours.fr" ;
+        foaf:role   "Chargée de mission à l'égalité et au handicap" .
+
+dbo:EducationalInstitution
+        rdfs:subClassOf  dbo:Organisation .
+
+<0450855K>  rdf:type  dbo:Event ;
+        foaf:name   "Groupe de travail sur le harcèlement" ;
+        dbo:status  "Mis en place" ;
+        dbo:Place   _:b62 .
+
+_:b62   rdf:type      dbo:EducationalInstitution ;
+        dbf:Region    "Centre-Val de Loire" ;
+        dbf:Academie  "Orléans-Tours" ;
+        foaf:name     "Université d'Orléans" .
+
+<0450855K>  foaf:Person  _:b63 .
+
+_:b63   foaf:name   "Raphaëlle Belando" ;
+        foaf:email  "raphaelle.bellando@univ-orleans.fr" ;
+        foaf:email  "egalite-fh@univ-orleans.fr" ;
+        foaf:role   "Chargée de mission à l'égalité femmes-hommes" .
+
+dbo:EducationalInstitution
+        rdfs:subClassOf  dbo:Organisation .
+
+<0333298F>  rdf:type  dbo:Event ;
+        foaf:name   "Dispositif conjoint avec l'université de Bordeaux 3 : deux cellules de veille contre le harcèlement sexuel, les violences sexistes et homophobes (CEVH) depuis 2013" ;
+        dbo:status  "Mis en place" ;
+        dbo:Place   _:b64 .
+
+_:b64   rdf:type      dbo:EducationalInstitution ;
+        dbf:Region    "Nouvelle-Aquitaine" ;
+        dbf:Academie  "Bordeaux" ;
+        dbf:Ville     "Bordeaux" ;
+        foaf:name     "Université de Bordeaux" .
+
+<0333298F>  foaf:Person  _:b65 .
+
+_:b65   foaf:name   "Marion Paoletti" ;
+        foaf:email  "cevhs@u-bordeaux.fr" ;
+        foaf:role   "Chargée de mission égalité femmes-hommes" .
+
+dbo:EducationalInstitution
+        rdfs:subClassOf  dbo:Organisation .
+
+<0421095M>  rdf:type  dbo:Event ;
+        foaf:name   "Cellule d'alerte sur les risques psycho-sociaux à destination des personnels" ;
+        dbo:status  "Mis en place" ;
+        dbo:Place   _:b66 .
+
+_:b66   rdf:type      dbo:EducationalInstitution ;
+        dbf:Region    "Auvergne-Rhône-Alpes" ;
+        dbf:Academie  "Lyon" ;
+        dbf:Ville     "Saint-Étienne" ;
+        foaf:name     "Université Jean Monnet" .
+
+<0421095M>  foaf:Person  _:b67 .
+
+_:b67   foaf:name   "Mouna Mouncif-Moungache" ;
+        foaf:email  "mouna.mouncif.moungache@univ-st-etienne.fr" ;
+        foaf:role   "Chargée de mission Egalité Femme-Homme" .
+
+dbo:EducationalInstitution
+        rdfs:subClassOf  dbo:Organisation .
+
+<0690192J>  rdf:type  dbo:Event ;
+        dbo:status  "En réflexion" ;
+        dbo:Place   _:b68 .
+
+_:b68   rdf:type      dbo:EducationalInstitution ;
+        dbf:Region    "Auvergne-Rhône-Alpes" ;
+        dbf:Academie  "Lyon" ;
+        dbf:Ville     "Villeurbanne" ;
+        foaf:name     "Institut national des sciences appliquées de Lyon" .
+
+<0690192J>  foaf:Person  _:b69 .
+
+_:b69   foaf:name   "Sonia Béchet" ;
+        foaf:email  "sonia.bechet@insa-france.fr" ;
+        foaf:role   "Chargée des questions d'égalité femmes-hommes" .
+
+dbo:EducationalInstitution
+        rdfs:subClassOf  dbo:Organisation .
+
+<0900424X>  rdf:type  dbo:Event ;
+        dbo:status  "En réflexion" ;
+        dbo:Place   _:b70 .
+
+_:b70   rdf:type      dbo:EducationalInstitution ;
+        dbf:Region    "Bourgogne-Franche-Comté" ;
+        dbf:Academie  "Besançon" ;
+        dbf:Ville     "Sevenans" ;
+        foaf:name     "Université de technologie de Belfort-Montbéliard" .
+
+<0900424X>  foaf:Person  _:b71 .
+
+_:b71   foaf:name   "Béatrice Bouriot" ;
+        foaf:email  "beatrice.bouriot@utbm.fr" ;
+        foaf:role   "Chargée de Mission \"Egalité des Genres\"" .
+
+dbo:EducationalInstitution
+        rdfs:subClassOf  dbo:Organisation .
+
+<0383493R>  rdf:type  dbo:Event ;
+        dbo:status  "En réflexion" ;
+        dbo:Place   _:b72 .
+
+_:b72   rdf:type      dbo:EducationalInstitution ;
+        dbf:Region    "Auvergne-Rhône-Alpes" ;
+        dbf:Academie  "Grenoble" ;
+        dbf:Ville     "Saint-Martin-d'Hères" ;
+        foaf:name     "Université de Grenoble Alpes" .
+
+<0383493R>  foaf:Person  _:b73 .
+
+dbo:EducationalInstitution
+        rdfs:subClassOf  dbo:Organisation .
+
+<9830445S>  rdf:type  dbo:Event ;
+        dbo:status  "En cours" ;
+        dbo:Place   _:b74 .
+
+_:b74   rdf:type      dbo:EducationalInstitution ;
+        dbf:Region    "Collectivités d'outre-mer" ;
+        dbf:Academie  "Nouvelle-Calédonie" ;
+        dbf:Ville     "Nouméa" ;
+        foaf:name     "Université de la Nouvelle-Calédonie" .
+
+<9830445S>  foaf:Person  _:b75 .
+
+dbo:EducationalInstitution
+        rdfs:subClassOf  dbo:Organisation .
+
+<0211237F>  rdf:type  dbo:Event ;
+        dbo:status  "En cours" ;
+        dbo:Place   _:b76 .
+
+_:b76   rdf:type      dbo:EducationalInstitution ;
+        dbf:Region    "Bourgogne-Franche-Comté" ;
+        dbf:Academie  "Dijon" ;
+        dbf:Ville     "Dijon" ;
+        foaf:name     "Université de Bourgogne" .
+
+<0211237F>  foaf:Person  _:b77 .
+
+dbo:EducationalInstitution
+        rdfs:subClassOf  dbo:Organisation .
+
+<0755598C>  rdf:type  dbo:Event ;
+        foaf:name   "Université Sorbonne Paris-Cité - Institut en santé Génésique (USPC-ISG)" ;
+        dbo:status  "Mis en place" ;
+        dbo:Place   _:b78 .
+
+_:b78   rdf:type      dbo:EducationalInstitution ;
+        dbf:Region    "Île-de-France" ;
+        dbf:Academie  "Paris" ;
+        dbf:Ville     "Paris 13e" ;
+        foaf:name     "Université Sorbonne Paris Cité" .
+
+<0755598C>  foaf:Person  _:b79 .
+
+_:b79   foaf:name   "Anne Kupiec" ;
+        foaf:email  "anne.kupiec@univ-paris-diderot.fr" ;
+        foaf:role   "Coordinatrice du réseau égalité femmes-hommes à l'USPC" .
+
+dbo:EducationalInstitution
+        rdfs:subClassOf  dbo:Organisation .
+
+<0352440M>  rdf:type  dbo:Event ;
+        dbo:status  "Mis en place" ;
+        dbo:Place   _:b80 .
+
+_:b80   rdf:type      dbo:EducationalInstitution ;
+        dbf:Region    "Bretagne" ;
+        dbf:Academie  "Rennes" ;
+        dbf:Ville     "Bruz" ;
+        foaf:name     "École normale supérieure de Rennes" .
+
+<0352440M>  foaf:Person  _:b81 .
+
+_:b81   foaf:email  "harcelementsexuel-smut@univ-rennes .fr" ;
+        foaf:email  "harcelementsexuel-simpps@univ-rennes .fr" .
+
+dbo:EducationalInstitution
+        rdfs:subClassOf  dbo:Organisation .
+
+<0673021V>  rdf:type  dbo:Event ;
+        dbo:status  "En cours" ;
+        dbo:Place   _:b82 .
+
+_:b82   rdf:type      dbo:EducationalInstitution ;
+        dbf:Region    "Grand Est" ;
+        dbf:Academie  "Strasbourg" ;
+        dbf:Ville     "Strasbourg" ;
+        foaf:name     "Université de Strasbourg" .
+
+<0673021V>  foaf:Person  _:b83 .
+
+_:b83   foaf:name   "Isabelle Kraus" ;
+        foaf:email  "egalites-diversite@unistra.fr" ;
+        foaf:role   "Chargée de mission Egalités - Diversité" .
+
+dbo:EducationalInstitution
+        rdfs:subClassOf  dbo:Organisation .
+
+<0311384L>  rdf:type  dbo:Event ;
+        dbo:status  "En réflexion" ;
+        dbo:Place   _:b84 .
+
+_:b84   rdf:type      dbo:EducationalInstitution ;
+        dbf:Region    "Occitanie" ;
+        dbf:Academie  "Toulouse" ;
+        dbf:Ville     "Toulouse" ;
+        foaf:name     "Université de Toulouse 3 - Paul Sabatier" .
+
+<0311384L>  foaf:Person  _:b85 .
+
+_:b85   foaf:name   "Cathy Armengaud" ;
+        foaf:email  "catherine.armengaud@univ-tlse3.fr" ;
+        foaf:role   "Chargée de mission Egalité Femmes-Hommes" .
+
+dbo:EducationalInstitution
+        rdfs:subClassOf  dbo:Organisation .
+
+<0290346U>  rdf:type  dbo:Event ;
+        foaf:name   "Cellule de terrain et groupe de travail" ;
+        dbo:status  "En cours" ;
+        dbo:Place   _:b86 .
+
+_:b86   rdf:type      dbo:EducationalInstitution ;
+        dbf:Region    "Bretagne" ;
+        dbf:Academie  "Rennes" ;
+        dbf:Ville     "Brest" ;
+        foaf:name     "Université de Bretagne Occidentale" .
+
+<0290346U>  foaf:Person  _:b87 .
+
+dbo:EducationalInstitution
+        rdfs:subClassOf  dbo:Organisation .
+
+<0860073M>  rdf:type  dbo:Event ;
+        dbo:status  "Absent" ;
+        dbo:Place   _:b88 .
+
+_:b88   rdf:type      dbo:EducationalInstitution ;
+        dbf:Region    "Nouvelle-Aquitaine" ;
+        dbf:Academie  "Poitiers" ;
+        dbf:Ville     "Chasseneuil-du-Poitou" ;
+        foaf:name     "École nationale supérieure de mécanique et d'aérotechnique de Poitiers" .
+
+<0860073M>  foaf:Person  _:b89 .
+
+_:b89   foaf:name   "Francis Cottet" ;
+        foaf:email  "francis.cottet@isae-ensma.fr" ;
+        foaf:role   "Directeur de l'ENSMA, Professeur des universités" .
+
+dbo:EducationalInstitution
+        rdfs:subClassOf  dbo:Organisation .
+
+<0761904G>  rdf:type  dbo:Event ;
+        dbo:status  "En réflexion" ;
+        dbo:Place   _:b90 .
+
+_:b90   rdf:type      dbo:EducationalInstitution ;
+        dbf:Region    "Normandie" ;
+        dbf:Academie  "Rouen" ;
+        dbf:Ville     "Mont-Saint-Aignan" ;
+        foaf:name     "Université de Rouen" .
+
+<0761904G>  foaf:Person  _:b91 .
+
+_:b91   foaf:name   "Elise Lemercier" ;
+        foaf:email  "elise.lemercier@univ-rouen.fr" ;
+        foaf:role   "Chargée de mission Egalité / Diversité" .
+
+dbo:EducationalInstitution
+        rdfs:subClassOf  dbo:Organisation .
+
+<0660437S>  rdf:type  dbo:Event ;
+        dbo:status  "En cours" ;
+        dbo:Place   _:b92 .
+
+_:b92   rdf:type      dbo:EducationalInstitution ;
+        dbf:Region    "Occitanie" ;
+        dbf:Academie  "Montpellier" ;
+        dbf:Ville     "Perpignan" ;
+        foaf:name     "Université de Perpignan - Via Domitia" .
+
+<0660437S>  foaf:Person  _:b93 .
+
+dbo:EducationalInstitution
+        rdfs:subClassOf  dbo:Organisation .
+
+<0134009M>  rdf:type  dbo:Event ;
+        dbo:status  "Mis en place" ;
+        dbo:Place   _:b94 .
+
+_:b94   rdf:type      dbo:EducationalInstitution ;
+        dbf:Region    "Provence-Alpes-Côte d'Azur" ;
+        dbf:Academie  "Aix-Marseille" ;
+        dbf:Ville     "Marseille 7e" ;
+        foaf:name     "Aix-Marseille université" .
+
+<0134009M>  foaf:Person  _:b95 .
+
+_:b95   foaf:name   "Nolwenn Lecuyer" ;
+        foaf:email  "harcelement-sexuel@univ-amu.fr" ;
+        foaf:role   "Vice-présidente déléguée à l'égalité Femmes-Hommes et la lutte contre les discriminations" .
+
+dbo:EducationalInstitution
+        rdfs:subClassOf  dbo:Organisation .
+
+<0911975C>  rdf:type  dbo:Event ;
+        foaf:name   "Cellule Sentinelle" ;
+        dbo:status  "Mis en place" ;
+        dbo:Place   _:b96 .
+
+_:b96   rdf:type      dbo:EducationalInstitution ;
+        dbf:Region    "Île-de-France" ;
+        dbf:Academie  "Versailles" ;
+        dbf:Ville     "Évry" ;
+        foaf:name     "Université d'Évry-Val d'Essonne" .
+
+<0911975C>  foaf:Person  _:b97 .
+
+_:b97   foaf:name   "Réjane Vallée" ;
+        foaf:email  "rejane.vallee@univ-evry.fr" ;
+        foaf:email  "parite@univ-evry.fr" ;
+        foaf:role   "Chargée de mission Parité" .
+
+dbo:EducationalInstitution
+        rdfs:subClassOf  dbo:Organisation .
+
+<0760165S>  rdf:type  dbo:Event ;
+        foaf:name   "Cellule d'accompagnement" ;
+        dbo:status  "Mis en place" ;
+        dbo:Place   _:b98 .
+
+_:b98   rdf:type      dbo:EducationalInstitution ;
+        dbf:Region    "Normandie" ;
+        dbf:Academie  "Rouen" ;
+        dbf:Ville     "Saint-Étienne-du-Rouvray" ;
+        foaf:name     "Institut national des sciences appliquées de Rouen" .
+
+<0760165S>  foaf:Person  _:b99 .
+
+_:b99   foaf:name   "Orlane Drux" ;
+        foaf:name   "Julien Saunier" ;
+        foaf:email  "orlane.drux@insa-rouen.fr" ;
+        foaf:email  "julien.saunier@insa-rouen.fr" ;
+        foaf:role   "Chargé-e-s de mission parité femmes-hommes" .
+
+dbo:EducationalInstitution
+        rdfs:subClassOf  dbo:Organisation .
+
+<0690173N>  rdf:type  dbo:Event ;
+        dbo:status  "En réflexion" ;
+        dbo:Place   _:b100 .
+
+_:b100  rdf:type      dbo:EducationalInstitution ;
+        dbf:Region    "Auvergne-Rhône-Alpes" ;
+        dbf:Academie  "Lyon" ;
+        dbf:Ville     "Lyon 7e" ;
+        foaf:name     "Institut d'études politiques de Lyon" .
+
+<0690173N>  foaf:Person  _:b101 .
+
+dbo:EducationalInstitution
+        rdfs:subClassOf  dbo:Organisation .
+
+<0440984F>  rdf:type  dbo:Event ;
+        dbo:status  "En cours" ;
+        dbo:Place   _:b102 .
+
+_:b102  rdf:type      dbo:EducationalInstitution ;
+        dbf:Region    "Pays de la Loire" ;
+        dbf:Academie  "Nantes" ;
+        dbf:Ville     "Nantes" ;
+        foaf:name     "Université de Nantes" .
+
+<0440984F>  foaf:Person  _:b103 .
+
+_:b103  foaf:name   "Charlotte Truchet" ;
+        foaf:email  "charlotte.truchet@univ-nantes.fr" ;
+        foaf:role   "Chargée de mission Egalité entre les Femmes et les Hommes" .

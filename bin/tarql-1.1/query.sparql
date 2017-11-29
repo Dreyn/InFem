@@ -1,0 +1,10 @@
+PREFIX ex: http://ex.org/a#
+PREFIX xsd: http://www.w3.org/2001/XMLSchema#
+
+CONSTRUCT {
+  ?URI a ex:Organization;
+} 
+FROM <file:fr-esr-initiatives-pour-la-lutte-contre-les-violences-sexistes-et-sexuelles.csv> 
+WHERE {
+  BIND (URI(CONCAT('http://ex.org/companies/', ?Localisation)) AS ?URI)
+}
