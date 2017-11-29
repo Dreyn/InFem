@@ -51,7 +51,7 @@ dbf:Departement owl:sameAs dbf:D%C3%A9partement ;
                 owl:sameAs <http://dbpedia.org/resource/Department_(country_subdivision)> .
 
 dbf:Region owl:sameAs dbf:R%C3%A9gion ;
-            owl:sameAs <http://eo.dbpedia.org/resource/Regiono>
+            owl:sameAs <http://eo.dbpedia.org/resource/Regiono> ;
             owl:sameAs <http://zh.dbpedia.org/resource/地方> ;
             owl:sameAs <http://sr.dbpedia.org/resource/Region_(višeznačna_odrednica)> ;
             owl:sameAs <http://sk.dbpedia.org/resource/Región> ;
