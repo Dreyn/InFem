@@ -1,72 +1,127 @@
 #Etape 1
 
 ##donne le nombre d'actions par ville
-SELECT ?ville (count(?ville) as ?nb)
+SELECT ?region ?ville (count(?ville) as ?nbActions)
 FROM<result.ttl>
-  WHERE {
-    ?x dbo:Place ?y .
-    ?y dbf:Ville ?ville .
-  }
-  GROUP BY ?ville
-  ORDER BY DESC(?nb)
+WHERE {
+  ?x swpo:hasLocation ?y.
+  ?y swpo:hasLocation ?z.
+  ?z db:City ?ville;
+	dbf:Region ?region.
+}
+GROUP BY ?region ?ville
+ORDER BY DESC(?nbActions)
 
-  -----------------------------
-  | ville                | nb |
-  =============================
-  | "Rennes"             | 7  |
-  | "Paris"              | 6  |
-  | "Lyon"               | 5  |
-  | "Lille"              | 3  |
-  | "Rouen"              | 3  |
-  | "Aix-Marseille"      | 2  |
-  | "Bordeaux"           | 2  |
-  | "Créteil"            | 2  |
-  | "Grenoble"           | 2  |
-  | "Montpellier"        | 2  |
-  | "Nantes"             | 2  |
-  | "Orléans-Tours"      | 2  |
-  | "Poitiers"           | 2  |
-  | "Strasbourg"         | 2  |
-  | "Versailles"         | 2  |
-  | "Besançon"           | 1  |
-  | "Caen"               | 1  |
-  | "Dijon"              | 1  |
-  | "Nancy-Metz"         | 1  |
-  | "Nice"               | 1  |
-  | "Nouvelle-Calédonie" | 1  |
-  | "Toulouse"           | 1  |
-  -----------------------------
+-------------------------------------------------------------------------
+| region                       | ville                      | nbActions |
+=========================================================================
+| "Île-de-France"              | "Paris"                    | 6         |
+| "Bretagne"                   | "Rennes"                   | 5         |
+| "Auvergne-Rhône-Alpes"       | "Lyon"                     | 3         |
+| "Hauts-de-France"            | "Villeneuve-d'Ascq"        | 2         |
+| "Auvergne-Rhône-Alpes"       | "Grenoble"                 | 1         |
+| "Auvergne-Rhône-Alpes"       | "Saint-Martin-d'Hères"     | 1         |
+| "Auvergne-Rhône-Alpes"       | "Saint-Étienne"            | 1         |
+| "Auvergne-Rhône-Alpes"       | "Villeurbanne"             | 1         |
+| "Bourgogne-Franche-Comté"    | "Dijon"                    | 1         |
+| "Bourgogne-Franche-Comté"    | "Sevenans"                 | 1         |
+| "Bretagne"                   | "Brest"                    | 1         |
+| "Bretagne"                   | "Bruz"                     | 1         |
+| "Collectivités d'outre-mer"  | "Nouméa"                   | 1         |
+| "Grand Est"                  | "Mulhouse"                 | 1         |
+| "Grand Est"                  | "Nancy"                    | 1         |
+| "Grand Est"                  | "Strasbourg"               | 1         |
+| "Hauts-de-France"            | "Arras"                    | 1         |
+| "Normandie"                  | "Caen"                     | 1         |
+| "Normandie"                  | "Le Havre"                 | 1         |
+| "Normandie"                  | "Mont-Saint-Aignan"        | 1         |
+| "Normandie"                  | "Saint-Étienne-du-Rouvray" | 1         |
+| "Nouvelle-Aquitaine"         | "Bordeaux"                 | 1         |
+| "Nouvelle-Aquitaine"         | "Chasseneuil-du-Poitou"    | 1         |
+| "Nouvelle-Aquitaine"         | "Pessac"                   | 1         |
+| "Nouvelle-Aquitaine"         | "Poitiers"                 | 1         |
+| "Occitanie"                  | "Montpellier"              | 1         |
+| "Occitanie"                  | "Perpignan"                | 1         |
+| "Occitanie"                  | "Toulouse"                 | 1         |
+| "Pays de la Loire"           | "Nantes"                   | 1         |
+| "Provence-Alpes-Côte d'Azur" | "Avignon"                  | 1         |
+| "Provence-Alpes-Côte d'Azur" | "Marseille"                | 1         |
+| "Provence-Alpes-Côte d'Azur" | "Nice"                     | 1         |
+| "Île-de-France"              | "Cachan"                   | 1         |
+| "Île-de-France"              | "Champs-sur-Marne"         | 1         |
+| "Île-de-France"              | "Versailles"               | 1         |
+| "Île-de-France"              | "Évry"                     | 1         |
+-------------------------------------------------------------------------
 
-## sélectionne les villes qui ont un événement en cours
 
-SELECT DISTINCT ?Ville
+##donne le nombre de villes et d'action par région
+SELECT ?region (count(distinct ?ville) as ?nbVilles) (count(?ville) as ?nbActions)
 FROM<result.ttl>
-  WHERE {
-    ?x rdf:type dbo:Event ;
-    dbo:status ?Etat ;
-    dbo:Place ?y .
-    ?y dbf:Ville ?Ville .
+WHERE {
+  ?x swpo:hasLocation ?y.
+  ?y swpo:hasLocation ?z.
+  ?z db:City ?ville;
+	dbf:Region ?region;
+}
+GROUP BY ?region
+ORDER BY DESC(?nbVilles)
+
+-------------------------------------------------------
+| region                       | nbVilles | nbActions |
+=======================================================
+| "Île-de-France"              | 5        | 10        |
+| "Auvergne-Rhône-Alpes"       | 5        | 7         |
+| "Normandie"                  | 4        | 4         |
+| "Nouvelle-Aquitaine"         | 4        | 4         |
+| "Grand Est"                  | 3        | 3         |
+| "Occitanie"                  | 3        | 3         |
+| "Provence-Alpes-Côte d'Azur" | 3        | 3         |
+| "Bretagne"                   | 3        | 7         |
+| "Bourgogne-Franche-Comté"    | 2        | 2         |
+| "Hauts-de-France"            | 2        | 3         |
+| "Collectivités d'outre-mer"  | 1        | 1         |
+| "Pays de la Loire"           | 1        | 1         |
+-------------------------------------------------------
+
+
+## Donne les événements en cours, avec sa ville et son (ou ses) contacte.
+
+SELECT DISTINCT ?action ?Ville ?Contacte ?AutreContacte
+FROM<result.ttl>
+WHERE {
+  ?action rdf:type dbo:Event ;
+		dbo:status ?Etat ;
+		swpo:hasLocation ?y;
+		foaf:Person ?p.
+		
+  ?y swpo:hasLocation ?z.
+  ?z db:City ?Ville .
+  
+  ?p foaf:name ?Contacte;
+	foaf:name ?Contacte2.
+
+  OPTIONAL {?p foaf:name ?Contacte2}
   FILTER (?Etat="En cours")
-  } ORDER BY ?Ville
+} ORDER BY ?Ville
 
-  ------------------------
-  | Ville                |
-  ========================
-  | "Dijon"              |
-  | "Grenoble"           |
-  | "Lille"              |
-  | "Lyon"               |
-  | "Montpellier"        |
-  | "Nancy-Metz"         |
-  | "Nantes"             |
-  | "Nice"               |
-  | "Nouvelle-Calédonie" |
-  | "Poitiers"           |
-  | "Rennes"             |
-  | "Rouen"              |
-  | "Strasbourg"         |
-  | "Versailles"         |
-  ------------------------
+
+--------------------------------------------------------------------------
+| action     | Ville        | Contacte                   | AutreContacte |
+==========================================================================
+| <0381912X> | "Grenoble"   | "Isabelle Schanen"         |               |
+| <0762762P> | "Le Havre"   | "Clare Ramsbottom"         |               |
+| <0692437Z> | "Lyon"       | "Marion Girer"             |               |
+| <0681166Y> | "Mulhouse"   | "Evelyne Aubry"            |               |
+| <0542493S> | "Nancy"      | "Frédéric Mouzaoui"        |               |
+| <0440984F> | "Nantes"     | "Charlotte Truchet"        |               |
+| <0060931E> | "Nice"       | "Emilie Souyri"            |               |
+| <0860856N> | "Poitiers"   | "Stéphane Bikialo"         |               |
+| <0350077U> | "Rennes"     | "Audrey Deniccurt-Nowicki" |               |
+| <0350095N> | "Rennes"     | "Nicoleta Bakhos"          |               |
+| <0673021V> | "Strasbourg" | "Isabelle Kraus"           |               |
+| <0781944P> | "Versailles" | "Armel Dubois-Nayt"        |               |
+--------------------------------------------------------------------------
+
 
 # Etape 2
 
@@ -75,37 +130,71 @@ SELECT DISTINCT ?institution
 FROM<result.ttl>
 FROM<graph-2.ttl>
 WHERE {
-	?x dbo:Place ?y .
-	?y foaf:name ?institution .
+	?x swpo:hasLocation ?y.
+	?y rdf:type dbo:EducationalInstitution ;
+		foaf:name ?institution .
 	?a ?b ?c .
 	?c rdf:type dbo:EducationalInstitution ;
 	   foaf:name ?institution .
 }
 ORDER BY ?institution
-------------------------------------------------------------------------------------
-| institution                                                              | count |
-====================================================================================
-| "Université de Strasbourg"                                               | 135   |
-| "Université de Lorraine"                                                 | 119   |
-| "Université de Poitiers"                                                 | 112   |
-| "Université de Rouen"                                                    | 100   |
-| "Université d'Orléans"                                                   | 80    |
-| "Université Lille 1 - Sciences technologies"                             | 78    |
-| "École normale supérieure de Lyon"                                       | 58    |
-| "Université d'Artois"                                                    | 57    |
-| "Université du Havre"                                                    | 55    |
-| "École normale supérieure de Cachan"                                     | 54    |
-| "Institut national des sciences appliquées de Lyon"                      | 45    |
-| "Université Lille 3 - Charles-de-Gaulle"                                 | 41    |
-| "Institut national des sciences appliquées de Rennes"                    | 37    |
-| "Institut national des sciences appliquées de Rouen"                     | 37    |
-| "Université de technologie de Belfort-Montbéliard"                       | 35    |
-| "École nationale supérieure d'ingénieurs de Caen"                        | 31    |
-| "École nationale supérieure de mécanique et d'aérotechnique de Poitiers" | 31    |
-| "École nationale supérieure de chimie de Rennes"                         | 28    |
-| "Université de la Nouvelle-Calédonie"                                    | 12    |
-| "Université de Bordeaux"                                                 | 10    |
-------------------------------------------------------------------------------------
+
+## Remarque: toutes les institutions de notre graphe sont dans le leur
+----------------------------------------------------------------------------------------------------
+| institution                                                                                      |
+====================================================================================================
+| "Aix-Marseille université"                                                                       |
+| "Ecole centrale de Nantes"                                                                       |
+| "Grenoble INP"                                                                                   |
+| "Institut d'études politiques de Lyon"                                                           |
+| "Institut d'études politiques de Paris"                                                          |
+| "Institut français des sciences et technologies des transports, de l'aménagement et des réseaux" |
+| "Institut national des sciences appliquées de Lyon"                                              |
+| "Institut national des sciences appliquées de Rennes"                                            |
+| "Institut national des sciences appliquées de Rouen"                                             |
+| "Université Bordeaux-Montaigne"                                                                  |
+| "Université François-Rabelais"                                                                   |
+| "Université Jean Monnet"                                                                         |
+| "Université Jean Moulin - Lyon 3"                                                                |
+| "Université Lille 1 - Sciences technologies"                                                     |
+| "Université Lille 3 - Charles-de-Gaulle"                                                         |
+| "Université Nice - Sophia-Antipolis"                                                             |
+| "Université Paris Descartes"                                                                     |
+| "Université Paris Diderot"                                                                       |
+| "Université Pierre et Marie Curie"                                                               |
+| "Université Rennes 2"                                                                            |
+| "Université Sorbonne Nouvelle - Paris 3"                                                         |
+| "Université Sorbonne Paris Cité"                                                                 |
+| "Université d'Artois"                                                                            |
+| "Université d'Avignon et des Pays de Vaucluse"                                                   |
+| "Université d'Orléans"                                                                           |
+| "Université d'Évry-Val d'Essonne"                                                                |
+| "Université de Bordeaux"                                                                         |
+| "Université de Bourgogne"                                                                        |
+| "Université de Bretagne Occidentale"                                                             |
+| "Université de Grenoble Alpes"                                                                   |
+| "Université de Haute-Alsace"                                                                     |
+| "Université de Lorraine"                                                                         |
+| "Université de Montpellier"                                                                      |
+| "Université de Nantes"                                                                           |
+| "Université de Perpignan - Via Domitia"                                                          |
+| "Université de Poitiers"                                                                         |
+| "Université de Rennes 1"                                                                         |
+| "Université de Rouen"                                                                            |
+| "Université de Strasbourg"                                                                       |
+| "Université de Toulouse 3 - Paul Sabatier"                                                       |
+| "Université de Versailles Saint-Quentin-en-Yvelines"                                             |
+| "Université de la Nouvelle-Calédonie"                                                            |
+| "Université de technologie de Belfort-Montbéliard"                                               |
+| "Université du Havre"                                                                            |
+| "École des hautes études en santé publique"                                                      |
+| "École nationale supérieure d'ingénieurs de Caen"                                                |
+| "École nationale supérieure de chimie de Rennes"                                                 |
+| "École nationale supérieure de mécanique et d'aérotechnique de Poitiers"                         |
+| "École normale supérieure de Cachan"                                                             |
+| "École normale supérieure de Lyon"                                                               |
+| "École normale supérieure de Rennes"                                                             |
+----------------------------------------------------------------------------------------------------
 
 ##sélectionne les institutions communes avec l'autre groupe et donne le nombre de prix attribués à des hommes.
 SELECT ?institution (count(?institution) as ?count)
