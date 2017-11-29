@@ -957,3 +957,98 @@ _:b102  rdf:type      dbo:EducationalInstitution ;
 _:b103  foaf:name   "Charlotte Truchet" ;
         foaf:email  "charlotte.truchet@univ-nantes.fr" ;
         foaf:role   "Chargée de mission Egalité entre les Femmes et les Hommes" .
+
+### Ontology
+
+dbo:EducationalInstitution rdfs:subClassOf owl:Thing .
+dbo:EducationalInstitution rdf:type rdfs:Class .
+dbo:EducationalInstitution rdfs:subClassOf dbo:EducationalInstitution .
+dbo:EducationalInstitution rdfs:subClassOf rdfs:Resource .
+dbo:EducationalInstitution rdfs:subClassOf schema:EducationalOrganization .
+dbo:EducationalInstitution owl:equivalentClass schema:EducationalOrganization .
+dbo:EducationalInstitution rdfs:subClassOf dbo:Place .
+dbo:EducationalInstitution rdfs:subClassOf dbo:Organisation .
+dbo:EducationalInstitution rdf:type owl:Class .
+dbo:EducationalInstitution rdf:type rdfs:Resource .
+dbo:EducationalInstitution owl:equivalentClass dbo:EducationalInstitution .
+
+dbo:Event rdfs:subClassOf owl:Thing .
+dbo:Event rdf:type rdfs:Class .
+dbo:Event rdfs:subClassOf dbo:Event .
+dbo:Event rdfs:subClassOf rdfs:Resource .
+dbo:Event rdfs:subClassOf schema:Event .
+dbo:Event owl:equivalentClass schema:Event .
+dbo:Event owl:disjointWith dbo:Person .
+dbo:Event rdf:type owl:Class .
+dbo:Event rdf:type rdfs:Resource .
+dbo:Event owl:equivalentClass dbo:Event .
+
+swpo:hasLocation rdf:type rdf:Property .
+swpo:hasLocation rdfs:range dbo:Place .
+swpo:hasLocation rdfs:domain dbo:Event .
+swpo:hasLocation rdf:type owl:ObjectProperty .
+swpo:hasLocation rdfs:subPropertyOf swpo:hasLocation .
+swpo:hasLocation rdf:type rdfs:Resource .
+
+foaf:Person rdf:type rdf:Property .
+foaf:Person rdf:type dbo:Person .
+foaf:Person rdfs:subClassOf foaf:Agent .
+foaf:Person owl:differentFrom <file:///home/mica/Downloads/sparql/0751722P> .
+foaf:Person owl:differentFrom <file:///home/mica/Downloads/sparql/0681166Y> .
+foaf:Person owl:differentFrom <file:///home/mica/Downloads/sparql/0350097R> .
+foaf:Person owl:differentFrom <file:///home/mica/Downloads/sparql/0840685N> .
+foaf:Person owl:differentFrom <file:///home/mica/Downloads/sparql/0350937D> .
+foaf:Person owl:differentFrom <file:///home/mica/Downloads/sparql/0694123G> .
+foaf:Person owl:differentFrom <file:///home/mica/Downloads/sparql/0383493R> .
+foaf:Person owl:differentFrom <file:///home/mica/Downloads/sparql/0440984F> .
+foaf:Person owl:differentFrom <file:///home/mica/Downloads/sparql/0911975C> .
+foaf:Person owl:differentFrom <file:///home/mica/Downloads/sparql/0860856N> .
+foaf:Person owl:differentFrom <file:///home/mica/Downloads/sparql/0421095M> .
+foaf:Person owl:differentFrom <file:///home/mica/Downloads/sparql/0350936C> .
+foaf:Person owl:differentFrom <file:///home/mica/Downloads/sparql/0593561A> .
+foaf:Person owl:differentFrom <file:///home/mica/Downloads/sparql/0440100V> .
+foaf:Person owl:differentFrom <file:///home/mica/Downloads/sparql/0593559Y> .
+foaf:Person owl:differentFrom <file:///home/mica/Downloads/sparql/0134009M> .
+foaf:Person owl:differentFrom <file:///home/mica/Downloads/sparql/0331766R> .
+foaf:Person owl:differentFrom <file:///home/mica/Downloads/sparql/0623957P> .
+foaf:Person owl:differentFrom <file:///home/mica/Downloads/sparql/0692437Z> .
+foaf:Person owl:differentFrom <file:///home/mica/Downloads/sparql/0381912X> .
+foaf:Person owl:differentFrom <file:///home/mica/Downloads/sparql/0673021V> .
+foaf:Person owl:differentFrom <file:///home/mica/Downloads/sparql/0450855K> .
+foaf:Person owl:differentFrom <file:///home/mica/Downloads/sparql/0690192J> .
+foaf:Person owl:differentFrom <file:///home/mica/Downloads/sparql/0772765M> .
+foaf:Person owl:differentFrom <file:///home/mica/Downloads/sparql/0940607Z> .
+foaf:Person owl:differentFrom <file:///home/mica/Downloads/sparql/0760165S> .
+foaf:Person owl:differentFrom <file:///home/mica/Downloads/sparql/0751719L> .
+foaf:Person owl:differentFrom <file:///home/mica/Downloads/sparql/0370800U> .
+foaf:Person owl:differentFrom <file:///home/mica/Downloads/sparql/0542493S> .
+foaf:Person owl:differentFrom <file:///home/mica/Downloads/sparql/0342321N> .
+foaf:Person owl:differentFrom <file:///home/mica/Downloads/sparql/0690173N> .
+foaf:Person owl:differentFrom <file:///home/mica/Downloads/sparql/0753431X> .
+foaf:Person owl:differentFrom <file:///home/mica/Downloads/sparql/0333298F> .
+foaf:Person owl:differentFrom <file:///home/mica/Downloads/sparql/0350077U> .
+foaf:Person owl:differentFrom <file:///home/mica/Downloads/sparql/9830445S> .
+foaf:Person owl:differentFrom <file:///home/mica/Downloads/sparql/0900424X> .
+foaf:Person owl:differentFrom <file:///home/mica/Downloads/sparql/0211237F> .
+foaf:Person owl:differentFrom <file:///home/mica/Downloads/sparql/0350095N> .
+foaf:Person owl:differentFrom <file:///home/mica/Downloads/sparql/0352440M> .
+foaf:Person owl:differentFrom <file:///home/mica/Downloads/sparql/0755598C> .
+foaf:Person owl:differentFrom <file:///home/mica/Downloads/sparql/0751721N> .
+foaf:Person owl:differentFrom <file:///home/mica/Downloads/sparql/0060931E> .
+foaf:Person owl:differentFrom <file:///home/mica/Downloads/sparql/0761904G> .
+foaf:Person owl:differentFrom <file:///home/mica/Downloads/sparql/0751723R> .
+foaf:Person owl:differentFrom <file:///home/mica/Downloads/sparql/0311384L> .
+foaf:Person owl:differentFrom <file:///home/mica/Downloads/sparql/0860073M> .
+foaf:Person owl:differentFrom <file:///home/mica/Downloads/sparql/0141720U> .
+foaf:Person owl:differentFrom <file:///home/mica/Downloads/sparql/0781944P> .
+foaf:Person owl:differentFrom <file:///home/mica/Downloads/sparql/0762762P> .
+foaf:Person owl:differentFrom <file:///home/mica/Downloads/sparql/0660437S> .
+foaf:Person owl:differentFrom <file:///home/mica/Downloads/sparql/0290346U> .
+foaf:Person rdf:type rdfs:Resource .
+foaf:Person rdfs:subPropertyOf foaf:Person .
+
+dbo:Place rdfs:subClassOf dbo:Location .
+dbo:Place owl:equivalentClass dbo:Location .
+dbo:Place rdf:type rdfs:Class .
+dbo:Place rdf:type rdfs:Resource .
+dbo:Place rdf:type owl:Class .
