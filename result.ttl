@@ -1,4 +1,5 @@
 @prefix dbo:  <http://dbpedia.org/ontology/> .
+@prefix db:  <http://dbpedia.org/resource/> .
 @prefix ex:  <http://ex.org/a#> .
 @prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#'> .
@@ -6,6 +7,8 @@
 @prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
 @prefix dbf:  <http://fr.dbpedia.org/resource/> .
 @prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <>
+@prefix schema: <>
 
 <0762762P>  rdf:type      dbo:Event ;
         dbo:status        "En cours" ;
@@ -15,7 +18,7 @@ _:b0    rdf:type          dbo:EducationalInstitution ;
         foaf:name         "Université du Havre" ;
         swpo:hasLocation  _:b1 .
 
-_:b1    dbo:City         "Le Havre" ;
+_:b1    db:City         "Le Havre" ;
         dbf:Departement  "Seine-Maritime" ;
         dbf:Region       "Normandie" .
 
@@ -34,7 +37,7 @@ _:b3    rdf:type          dbo:EducationalInstitution ;
         foaf:name         "Université Paris Descartes" ;
         swpo:hasLocation  _:b4 .
 
-_:b4    dbo:City         "Paris" ;
+_:b4    db:City         "Paris" ;
         dbf:Departement  "Paris" ;
         dbf:Region       "Île-de-France" .
 
@@ -53,7 +56,7 @@ _:b6    rdf:type          dbo:EducationalInstitution ;
         foaf:name         "Institut d'études politiques de Paris" ;
         swpo:hasLocation  _:b7 .
 
-_:b7    dbo:City         "Paris" ;
+_:b7    db:City         "Paris" ;
         dbf:Departement  "Paris" ;
         dbf:Region       "Île-de-France" .
 
@@ -73,7 +76,7 @@ _:b9    rdf:type          dbo:EducationalInstitution ;
         foaf:name         "Université Lille 3 - Charles-de-Gaulle" ;
         swpo:hasLocation  _:b10 .
 
-_:b10   dbo:City         "Villeneuve-d'Ascq" ;
+_:b10   db:City         "Villeneuve-d'Ascq" ;
         dbf:Departement  "Nord" ;
         dbf:Region       "Hauts-de-France" .
 
@@ -89,7 +92,7 @@ _:b12   rdf:type          dbo:EducationalInstitution ;
         foaf:name         "Université Rennes 2" ;
         swpo:hasLocation  _:b13 .
 
-_:b13   dbo:City         "Rennes" ;
+_:b13   db:City         "Rennes" ;
         dbf:Departement  "Ille-et-Vilaine" ;
         dbf:Region       "Bretagne" .
 
@@ -106,7 +109,7 @@ _:b15   rdf:type          dbo:EducationalInstitution ;
         foaf:name         "Université de Poitiers" ;
         swpo:hasLocation  _:b16 .
 
-_:b16   dbo:City         "Poitiers" ;
+_:b16   db:City         "Poitiers" ;
         dbf:Departement  "Vienne" ;
         dbf:Region       "Nouvelle-Aquitaine" .
 
@@ -125,7 +128,7 @@ _:b18   rdf:type          dbo:EducationalInstitution ;
         foaf:name         "École des hautes études en santé publique" ;
         swpo:hasLocation  _:b19 .
 
-_:b19   dbo:City         "Rennes" ;
+_:b19   db:City         "Rennes" ;
         dbf:Departement  "Ille-et-Vilaine" ;
         dbf:Region       "Bretagne" .
 
@@ -143,7 +146,7 @@ _:b21   rdf:type          dbo:EducationalInstitution ;
         foaf:name         "École nationale supérieure de chimie de Rennes" ;
         swpo:hasLocation  _:b22 .
 
-_:b22   dbo:City         "Rennes" ;
+_:b22   db:City         "Rennes" ;
         dbf:Departement  "Ille-et-Vilaine" ;
         dbf:Region       "Bretagne" .
 
@@ -168,7 +171,7 @@ _:b27   rdf:type          dbo:EducationalInstitution ;
         foaf:name         "Université Bordeaux-Montaigne" ;
         swpo:hasLocation  _:b28 .
 
-_:b28   dbo:City         "Pessac" ;
+_:b28   db:City         "Pessac" ;
         dbf:Departement  "Gironde" ;
         dbf:Region       "Nouvelle-Aquitaine" .
 
@@ -186,7 +189,7 @@ _:b30   rdf:type          dbo:EducationalInstitution ;
         foaf:name         "Université d'Artois" ;
         swpo:hasLocation  _:b31 .
 
-_:b31   dbo:City         "Arras" ;
+_:b31   db:City         "Arras" ;
         dbf:Departement  "Pas-de-Calais" ;
         dbf:Region       "Hauts-de-France" .
 
@@ -200,7 +203,7 @@ _:b33   rdf:type          dbo:EducationalInstitution ;
         foaf:name         "Université d'Avignon et des Pays de Vaucluse" ;
         swpo:hasLocation  _:b34 .
 
-_:b34   dbo:City         "Avignon" ;
+_:b34   db:City         "Avignon" ;
         dbf:Departement  "Vaucluse" ;
         dbf:Region       "Provence-Alpes-Côte d'Azur" .
 
@@ -219,7 +222,7 @@ _:b36   rdf:type          dbo:EducationalInstitution ;
         foaf:name         "Université de Montpellier" ;
         swpo:hasLocation  _:b37 .
 
-_:b37   dbo:City         "Montpellier" ;
+_:b37   db:City         "Montpellier" ;
         dbf:Departement  "Hérault" ;
         dbf:Region       "Occitanie" .
 
@@ -237,7 +240,7 @@ _:b39   rdf:type          dbo:EducationalInstitution ;
         foaf:name         "Université Nice - Sophia-Antipolis" ;
         swpo:hasLocation  _:b40 .
 
-_:b40   dbo:City         "Nice" ;
+_:b40   db:City         "Nice" ;
         dbf:Departement  "Alpes-Maritimes" ;
         dbf:Region       "Provence-Alpes-Côte d'Azur" .
 
@@ -255,7 +258,7 @@ _:b42   rdf:type          dbo:EducationalInstitution ;
         foaf:name         "Université de Lorraine" ;
         swpo:hasLocation  _:b43 .
 
-_:b43   dbo:City         "Nancy" ;
+_:b43   db:City         "Nancy" ;
         dbf:Departement  "Meurthe-et-Moselle" ;
         dbf:Region       "Grand Est" .
 
@@ -271,7 +274,7 @@ _:b45   rdf:type          dbo:EducationalInstitution ;
         foaf:name         "Institut français des sciences et technologies des transports, de l'aménagement et des réseaux" ;
         swpo:hasLocation  _:b46 .
 
-_:b46   dbo:City         "Champs-sur-Marne" ;
+_:b46   db:City         "Champs-sur-Marne" ;
         dbf:Departement  "Seine-et-Marne" ;
         dbf:Region       "Île-de-France" .
 
@@ -289,7 +292,7 @@ _:b48   rdf:type          dbo:EducationalInstitution ;
         foaf:name         "Université Pierre et Marie Curie" ;
         swpo:hasLocation  _:b49 .
 
-_:b49   dbo:City         "Paris" ;
+_:b49   db:City         "Paris" ;
         dbf:Departement  "Paris" ;
         dbf:Region       "Île-de-France" .
 
@@ -308,7 +311,7 @@ _:b51   rdf:type          dbo:EducationalInstitution ;
         foaf:name         "Institut national des sciences appliquées de Rennes" ;
         swpo:hasLocation  _:b52 .
 
-_:b52   dbo:City         "Rennes" ;
+_:b52   db:City         "Rennes" ;
         dbf:Departement  "Ille-et-Vilaine" ;
         dbf:Region       "Bretagne" .
 
@@ -323,7 +326,7 @@ _:b54   rdf:type          dbo:EducationalInstitution ;
         foaf:name         "Université Lille 1 - Sciences technologies" ;
         swpo:hasLocation  _:b55 .
 
-_:b55   dbo:City         "Villeneuve-d'Ascq" ;
+_:b55   db:City         "Villeneuve-d'Ascq" ;
         dbf:Departement  "Nord" ;
         dbf:Region       "Hauts-de-France" .
 
@@ -343,7 +346,7 @@ _:b57   rdf:type          dbo:EducationalInstitution ;
         foaf:name         "Université Jean Moulin - Lyon 3" ;
         swpo:hasLocation  _:b58 .
 
-_:b58   dbo:City         "Lyon" ;
+_:b58   db:City         "Lyon" ;
         dbf:Departement  "Rhône" ;
         dbf:Region       "Auvergne-Rhône-Alpes" .
 
@@ -379,7 +382,7 @@ _:b63   rdf:type          dbo:EducationalInstitution ;
         foaf:name         "École nationale supérieure d'ingénieurs de Caen" ;
         swpo:hasLocation  _:b64 .
 
-_:b64   dbo:City         "Caen" ;
+_:b64   db:City         "Caen" ;
         dbf:Departement  "Calvados" ;
         dbf:Region       "Normandie" .
 
@@ -393,7 +396,7 @@ _:b66   rdf:type          dbo:EducationalInstitution ;
         foaf:name         "Grenoble INP" ;
         swpo:hasLocation  _:b67 .
 
-_:b67   dbo:City         "Grenoble" ;
+_:b67   db:City         "Grenoble" ;
         dbf:Departement  "Isère" ;
         dbf:Region       "Auvergne-Rhône-Alpes" .
 
@@ -411,7 +414,7 @@ _:b69   rdf:type          dbo:EducationalInstitution ;
         foaf:name         "École normale supérieure de Lyon" ;
         swpo:hasLocation  _:b70 .
 
-_:b70   dbo:City         "Lyon" ;
+_:b70   db:City         "Lyon" ;
         dbf:Departement  "Rhône" ;
         dbf:Region       "Auvergne-Rhône-Alpes" .
 
@@ -432,7 +435,7 @@ _:b72   rdf:type          dbo:EducationalInstitution ;
         foaf:name         "Université Sorbonne Nouvelle - Paris 3" ;
         swpo:hasLocation  _:b73 .
 
-_:b73   dbo:City         "Paris" ;
+_:b73   db:City         "Paris" ;
         dbf:Departement  "Paris" ;
         dbf:Region       "Île-de-France" .
 
@@ -451,7 +454,7 @@ _:b75   rdf:type          dbo:EducationalInstitution ;
         foaf:name         "Université Paris Diderot" ;
         swpo:hasLocation  _:b76 .
 
-_:b76   dbo:City         "Paris" ;
+_:b76   db:City         "Paris" ;
         dbf:Departement  "Paris" ;
         dbf:Region       "Île-de-France" .
 
@@ -465,7 +468,7 @@ _:b78   rdf:type          dbo:EducationalInstitution ;
         foaf:name         "École normale supérieure de Cachan" ;
         swpo:hasLocation  _:b79 .
 
-_:b79   dbo:City         "Cachan" ;
+_:b79   db:City         "Cachan" ;
         dbf:Departement  "Val-de-Marne" ;
         dbf:Region       "Île-de-France" .
 
@@ -484,7 +487,7 @@ _:b81   rdf:type          dbo:EducationalInstitution ;
         foaf:name         "Université de Haute-Alsace" ;
         swpo:hasLocation  _:b82 .
 
-_:b82   dbo:City         "Mulhouse" ;
+_:b82   db:City         "Mulhouse" ;
         dbf:Departement  "Haut-Rhin" ;
         dbf:Region       "Grand Est" .
 
@@ -502,7 +505,7 @@ _:b84   rdf:type          dbo:EducationalInstitution ;
         foaf:name         "Université de Rennes 1" ;
         swpo:hasLocation  _:b85 .
 
-_:b85   dbo:City         "Rennes" ;
+_:b85   db:City         "Rennes" ;
         dbf:Departement  "Ille-et-Vilaine" ;
         dbf:Region       "Bretagne" .
 
@@ -516,7 +519,7 @@ _:b87   rdf:type          dbo:EducationalInstitution ;
         foaf:name         "Université de Versailles Saint-Quentin-en-Yvelines" ;
         swpo:hasLocation  _:b88 .
 
-_:b88   dbo:City         "Versailles" ;
+_:b88   db:City         "Versailles" ;
         dbf:Departement  "Yvelines" ;
         dbf:Region       "Île-de-France" .
 
@@ -571,7 +574,7 @@ _:b96   rdf:type          dbo:EducationalInstitution ;
         foaf:name         "Université de Bordeaux" ;
         swpo:hasLocation  _:b97 .
 
-_:b97   dbo:City         "Bordeaux" ;
+_:b97   db:City         "Bordeaux" ;
         dbf:Departement  "Gironde" ;
         dbf:Region       "Nouvelle-Aquitaine" .
 
@@ -590,7 +593,7 @@ _:b99   rdf:type          dbo:EducationalInstitution ;
         foaf:name         "Université Jean Monnet" ;
         swpo:hasLocation  _:b100 .
 
-_:b100  dbo:City         "Saint-Étienne" ;
+_:b100  db:City         "Saint-Étienne" ;
         dbf:Departement  "Loire" ;
         dbf:Region       "Auvergne-Rhône-Alpes" .
 
@@ -608,7 +611,7 @@ _:b102  rdf:type          dbo:EducationalInstitution ;
         foaf:name         "Institut national des sciences appliquées de Lyon" ;
         swpo:hasLocation  _:b103 .
 
-_:b103  dbo:City         "Villeurbanne" ;
+_:b103  db:City         "Villeurbanne" ;
         dbf:Departement  "Rhône" ;
         dbf:Region       "Auvergne-Rhône-Alpes" .
 
@@ -626,7 +629,7 @@ _:b105  rdf:type          dbo:EducationalInstitution ;
         foaf:name         "Université de technologie de Belfort-Montbéliard" ;
         swpo:hasLocation  _:b106 .
 
-_:b106  dbo:City         "Sevenans" ;
+_:b106  db:City         "Sevenans" ;
         dbf:Departement  "Territoire de Belfort" ;
         dbf:Region       "Bourgogne-Franche-Comté" .
 
@@ -644,7 +647,7 @@ _:b108  rdf:type          dbo:EducationalInstitution ;
         foaf:name         "Université de Grenoble Alpes" ;
         swpo:hasLocation  _:b109 .
 
-_:b109  dbo:City         "Saint-Martin-d'Hères" ;
+_:b109  db:City         "Saint-Martin-d'Hères" ;
         dbf:Departement  "Isère" ;
         dbf:Region       "Auvergne-Rhône-Alpes" .
 
@@ -658,7 +661,7 @@ _:b111  rdf:type          dbo:EducationalInstitution ;
         foaf:name         "Université de la Nouvelle-Calédonie" ;
         swpo:hasLocation  _:b112 .
 
-_:b112  dbo:City         "Nouméa" ;
+_:b112  db:City         "Nouméa" ;
         dbf:Departement  "Nouvelle-Calédonie" ;
         dbf:Region       "Collectivités d'outre-mer" .
 
@@ -672,7 +675,7 @@ _:b114  rdf:type          dbo:EducationalInstitution ;
         foaf:name         "Université de Bourgogne" ;
         swpo:hasLocation  _:b115 .
 
-_:b115  dbo:City         "Dijon" ;
+_:b115  db:City         "Dijon" ;
         dbf:Departement  "Côte-d'Or" ;
         dbf:Region       "Bourgogne-Franche-Comté" .
 
@@ -687,7 +690,7 @@ _:b117  rdf:type          dbo:EducationalInstitution ;
         foaf:name         "Université Sorbonne Paris Cité" ;
         swpo:hasLocation  _:b118 .
 
-_:b118  dbo:City         "Paris" ;
+_:b118  db:City         "Paris" ;
         dbf:Departement  "Paris" ;
         dbf:Region       "Île-de-France" .
 
@@ -705,7 +708,7 @@ _:b120  rdf:type          dbo:EducationalInstitution ;
         foaf:name         "École normale supérieure de Rennes" ;
         swpo:hasLocation  _:b121 .
 
-_:b121  dbo:City         "Bruz" ;
+_:b121  db:City         "Bruz" ;
         dbf:Departement  "Ille-et-Vilaine" ;
         dbf:Region       "Bretagne" .
 
@@ -722,7 +725,7 @@ _:b123  rdf:type          dbo:EducationalInstitution ;
         foaf:name         "Université de Strasbourg" ;
         swpo:hasLocation  _:b124 .
 
-_:b124  dbo:City         "Strasbourg" ;
+_:b124  db:City         "Strasbourg" ;
         dbf:Departement  "Bas-Rhin" ;
         dbf:Region       "Grand Est" .
 
@@ -740,7 +743,7 @@ _:b126  rdf:type          dbo:EducationalInstitution ;
         foaf:name         "Université de Toulouse 3 - Paul Sabatier" ;
         swpo:hasLocation  _:b127 .
 
-_:b127  dbo:City         "Toulouse" ;
+_:b127  db:City         "Toulouse" ;
         dbf:Departement  "Haute-Garonne" ;
         dbf:Region       "Occitanie" .
 
@@ -759,7 +762,7 @@ _:b129  rdf:type          dbo:EducationalInstitution ;
         foaf:name         "Université de Bretagne Occidentale" ;
         swpo:hasLocation  _:b130 .
 
-_:b130  dbo:City         "Brest" ;
+_:b130  db:City         "Brest" ;
         dbf:Departement  "Finistère" ;
         dbf:Region       "Bretagne" .
 
@@ -773,7 +776,7 @@ _:b132  rdf:type          dbo:EducationalInstitution ;
         foaf:name         "École nationale supérieure de mécanique et d'aérotechnique de Poitiers" ;
         swpo:hasLocation  _:b133 .
 
-_:b133  dbo:City         "Chasseneuil-du-Poitou" ;
+_:b133  db:City         "Chasseneuil-du-Poitou" ;
         dbf:Departement  "Vienne" ;
         dbf:Region       "Nouvelle-Aquitaine" .
 
@@ -791,7 +794,7 @@ _:b135  rdf:type          dbo:EducationalInstitution ;
         foaf:name         "Université de Rouen" ;
         swpo:hasLocation  _:b136 .
 
-_:b136  dbo:City         "Mont-Saint-Aignan" ;
+_:b136  db:City         "Mont-Saint-Aignan" ;
         dbf:Departement  "Seine-Maritime" ;
         dbf:Region       "Normandie" .
 
@@ -809,7 +812,7 @@ _:b138  rdf:type          dbo:EducationalInstitution ;
         foaf:name         "Université de Perpignan - Via Domitia" ;
         swpo:hasLocation  _:b139 .
 
-_:b139  dbo:City         "Perpignan" ;
+_:b139  db:City         "Perpignan" ;
         dbf:Departement  "Pyrénées-Orientales" ;
         dbf:Region       "Occitanie" .
 
@@ -823,7 +826,7 @@ _:b141  rdf:type          dbo:EducationalInstitution ;
         foaf:name         "Aix-Marseille université" ;
         swpo:hasLocation  _:b142 .
 
-_:b142  dbo:City         "Marseille" ;
+_:b142  db:City         "Marseille" ;
         dbf:Departement  "Bouches-du-Rhône" ;
         dbf:Region       "Provence-Alpes-Côte d'Azur" .
 
@@ -842,7 +845,7 @@ _:b144  rdf:type          dbo:EducationalInstitution ;
         foaf:name         "Université d'Évry-Val d'Essonne" ;
         swpo:hasLocation  _:b145 .
 
-_:b145  dbo:City         "Évry" ;
+_:b145  db:City         "Évry" ;
         dbf:Departement  "Essonne" ;
         dbf:Region       "Île-de-France" .
 
@@ -862,7 +865,7 @@ _:b147  rdf:type          dbo:EducationalInstitution ;
         foaf:name         "Institut national des sciences appliquées de Rouen" ;
         swpo:hasLocation  _:b148 .
 
-_:b148  dbo:City         "Saint-Étienne-du-Rouvray" ;
+_:b148  db:City         "Saint-Étienne-du-Rouvray" ;
         dbf:Departement  "Seine-Maritime" ;
         dbf:Region       "Normandie" .
 
@@ -882,7 +885,7 @@ _:b150  rdf:type          dbo:EducationalInstitution ;
         foaf:name         "Institut d'études politiques de Lyon" ;
         swpo:hasLocation  _:b151 .
 
-_:b151  dbo:City         "Lyon" ;
+_:b151  db:City         "Lyon" ;
         dbf:Departement  "Rhône" ;
         dbf:Region       "Auvergne-Rhône-Alpes" .
 
@@ -896,7 +899,7 @@ _:b153  rdf:type          dbo:EducationalInstitution ;
         foaf:name         "Université de Nantes" ;
         swpo:hasLocation  _:b154 .
 
-_:b154  dbo:City         "Nantes" ;
+_:b154  db:City         "Nantes" ;
         dbf:Departement  "Loire-Atlantique" ;
         dbf:Region       "Pays de la Loire" .
 
