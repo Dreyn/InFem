@@ -1,2 +1,2 @@
 # InFem
-Projet de Web des données, web sémentique, en M1 ATAL
+Projet de Web des données, web sémantique, en M1 ATAL.
