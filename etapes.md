@@ -84,7 +84,7 @@ ORDER BY DESC(?nbVilles)
 -------------------------------------------------------
 
 
-## Donne les événements en cours, avec sa ville et son (ou ses) contacte.
+## Donne les événements en cours, avec sa ville et son (ou ses) contact.
 
 SELECT DISTINCT ?action ?Ville ?Contacte ?AutreContacte
 FROM<result.ttl>
@@ -127,125 +127,153 @@ WHERE {
 
 ## sélectionne les institutions en commun entre notre dataset et celui de l'autre groupe
 SELECT DISTINCT ?institution
-FROM<result.ttl>
-FROM<graph-2.ttl>
+FROM <result.ttl>
+FROM <autregroupe.ttl>
 WHERE {
 	?x swpo:hasLocation ?y.
 	?y rdf:type dbo:EducationalInstitution ;
-		foaf:name ?institution .
-	?a ?b ?c .
+		foaf:name ?institution.
+	
+	?a ?b ?c;
+	   foaf:gender ?g.
 	?c rdf:type dbo:EducationalInstitution ;
 	   foaf:name ?institution .
 }
 ORDER BY ?institution
 
-## Remarque: toutes les institutions de notre graphe sont dans le leur
-----------------------------------------------------------------------------------------------------
-| institution                                                                                      |
-====================================================================================================
-| "Aix-Marseille université"                                                                       |
-| "Ecole centrale de Nantes"                                                                       |
-| "Grenoble INP"                                                                                   |
-| "Institut d'études politiques de Lyon"                                                           |
-| "Institut d'études politiques de Paris"                                                          |
-| "Institut français des sciences et technologies des transports, de l'aménagement et des réseaux" |
-| "Institut national des sciences appliquées de Lyon"                                              |
-| "Institut national des sciences appliquées de Rennes"                                            |
-| "Institut national des sciences appliquées de Rouen"                                             |
-| "Université Bordeaux-Montaigne"                                                                  |
-| "Université François-Rabelais"                                                                   |
-| "Université Jean Monnet"                                                                         |
-| "Université Jean Moulin - Lyon 3"                                                                |
-| "Université Lille 1 - Sciences technologies"                                                     |
-| "Université Lille 3 - Charles-de-Gaulle"                                                         |
-| "Université Nice - Sophia-Antipolis"                                                             |
-| "Université Paris Descartes"                                                                     |
-| "Université Paris Diderot"                                                                       |
-| "Université Pierre et Marie Curie"                                                               |
-| "Université Rennes 2"                                                                            |
-| "Université Sorbonne Nouvelle - Paris 3"                                                         |
-| "Université Sorbonne Paris Cité"                                                                 |
-| "Université d'Artois"                                                                            |
-| "Université d'Avignon et des Pays de Vaucluse"                                                   |
-| "Université d'Orléans"                                                                           |
-| "Université d'Évry-Val d'Essonne"                                                                |
-| "Université de Bordeaux"                                                                         |
-| "Université de Bourgogne"                                                                        |
-| "Université de Bretagne Occidentale"                                                             |
-| "Université de Grenoble Alpes"                                                                   |
-| "Université de Haute-Alsace"                                                                     |
-| "Université de Lorraine"                                                                         |
-| "Université de Montpellier"                                                                      |
-| "Université de Nantes"                                                                           |
-| "Université de Perpignan - Via Domitia"                                                          |
-| "Université de Poitiers"                                                                         |
-| "Université de Rennes 1"                                                                         |
-| "Université de Rouen"                                                                            |
-| "Université de Strasbourg"                                                                       |
-| "Université de Toulouse 3 - Paul Sabatier"                                                       |
-| "Université de Versailles Saint-Quentin-en-Yvelines"                                             |
-| "Université de la Nouvelle-Calédonie"                                                            |
-| "Université de technologie de Belfort-Montbéliard"                                               |
-| "Université du Havre"                                                                            |
-| "École des hautes études en santé publique"                                                      |
-| "École nationale supérieure d'ingénieurs de Caen"                                                |
-| "École nationale supérieure de chimie de Rennes"                                                 |
-| "École nationale supérieure de mécanique et d'aérotechnique de Poitiers"                         |
-| "École normale supérieure de Cachan"                                                             |
-| "École normale supérieure de Lyon"                                                               |
-| "École normale supérieure de Rennes"                                                             |
-----------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------
+| institution                                                              |
+============================================================================
+| "Institut national des sciences appliquées de Lyon"                      |
+| "Institut national des sciences appliquées de Rennes"                    |
+| "Institut national des sciences appliquées de Rouen"                     |
+| "Université Lille 1 - Sciences technologies"                             |
+| "Université Lille 3 - Charles-de-Gaulle"                                 |
+| "Université d'Artois"                                                    |
+| "Université d'Orléans"                                                   |
+| "Université de Bordeaux"                                                 |
+| "Université de Lorraine"                                                 |
+| "Université de Poitiers"                                                 |
+| "Université de Rouen"                                                    |
+| "Université de Strasbourg"                                               |
+| "Université de la Nouvelle-Calédonie"                                    |
+| "Université de technologie de Belfort-Montbéliard"                       |
+| "Université du Havre"                                                    |
+| "École nationale supérieure d'ingénieurs de Caen"                        |
+| "École nationale supérieure de chimie de Rennes"                         |
+| "École nationale supérieure de mécanique et d'aérotechnique de Poitiers" |
+| "École normale supérieure de Cachan"                                     |
+| "École normale supérieure de Lyon"                                       |
+----------------------------------------------------------------------------
 
-##sélectionne les institutions communes avec l'autre groupe et donne le nombre de prix attribués à des hommes.
-SELECT ?institution (count(?institution) as ?count)
-FROM<result.ttl>
-FROM<graph-2.ttl>
+
+## Donne pour les établissements en commun, le nombre de prix donnés aux femmes, aux hommes, et le nombre d'actions
+
+SELECT ?institution (count(?female) as ?prixF) (count(?male) as ?prixM) (count(distinct ?action) as ?nbActions)
+FROM <result.ttl>
+FROM <autregroupe.ttl>
 WHERE {
-	?x dbo:Place ?y .
-	?y foaf:name ?institution .
-	?a ?b ?c ;
-        foaf:gender  "Hommes" .
-	?c rdf:type dbo:EducationalInstitution ;
-	   foaf:name ?institution .
+	{
+		?action swpo:hasLocation ?y.
+		?y rdf:type dbo:EducationalInstitution;
+		   foaf:name ?institution.
+		
+		?a foaf:gender ?male;
+		   ?b ?c.
+		?c rdf:type dbo:EducationalInstitution;
+		   foaf:name ?institution.
+		
+		FILTER (?male = "Hommes").
+	}
+	UNION
+	{
+		?action swpo:hasLocation ?y.
+		?y rdf:type dbo:EducationalInstitution;
+		   foaf:name ?institution.
+		
+		?a foaf:gender ?female;
+		   ?b ?c.
+		?c rdf:type dbo:EducationalInstitution;
+		   foaf:name ?institution.
+		
+		FILTER (?female = "Femmes").
+	}
 }
-GROUP BY ?count ?institution
-ORDER BY DESC(?count)
+GROUP BY ?institution
+ORDER BY DESC(?prixF)
 
-------------------------------------------------------------------------------------
-| institution                                                              | count |
-====================================================================================
-| "Université de Strasbourg"                                               | 97    |
-| "Université de Lorraine"                                                 | 87    |
-| "Université de Poitiers"                                                 | 74    |
-| "Université de Rouen"                                                    | 66    |
-| "Université Lille 1 - Sciences technologies"                             | 53    |
-| "Université d'Orléans"                                                   | 51    |
-| "Institut national des sciences appliquées de Lyon"                      | 35    |
-| "École normale supérieure de Lyon"                                       | 33    |
-| "Université Lille 3 - Charles-de-Gaulle"                                 | 27    |
-| "Université d'Artois"                                                    | 19    |
-| "École normale supérieure de Cachan"                                     | 18    |
-| "Institut national des sciences appliquées de Rennes"                    | 13    |
-| "Université de technologie de Belfort-Montbéliard"                       | 12    |
-| "Université du Havre"                                                    | 12    |
-| "École nationale supérieure de mécanique et d'aérotechnique de Poitiers" | 9     |
-| "École nationale supérieure d'ingénieurs de Caen"                        | 6     |
-| "École nationale supérieure de chimie de Rennes"                         | 5     |
-| "Institut national des sciences appliquées de Rouen"                     | 4     |
-| "Université de Bordeaux"                                                 | 4     |
-------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------
+| institution                                                              | prixF | prixM | nbActions |
+========================================================================================================
+| "Université de Strasbourg"                                               | 97    | 135   | 1         |
+| "Université de Lorraine"                                                 | 87    | 119   | 1         |
+| "Université de Poitiers"                                                 | 74    | 112   | 1         |
+| "Université de Rouen"                                                    | 66    | 100   | 1         |
+| "Université Lille 1 - Sciences technologies"                             | 53    | 78    | 1         |
+| "Université d'Orléans"                                                   | 51    | 80    | 1         |
+| "Institut national des sciences appliquées de Lyon"                      | 35    | 45    | 1         |
+| "École normale supérieure de Lyon"                                       | 33    | 58    | 1         |
+| "Université Lille 3 - Charles-de-Gaulle"                                 | 27    | 41    | 1         |
+| "Université d'Artois"                                                    | 19    | 57    | 1         |
+| "École normale supérieure de Cachan"                                     | 18    | 54    | 1         |
+| "Institut national des sciences appliquées de Rennes"                    | 13    | 37    | 1         |
+| "Université de technologie de Belfort-Montbéliard"                       | 12    | 35    | 1         |
+| "Université du Havre"                                                    | 12    | 55    | 1         |
+| "École nationale supérieure de mécanique et d'aérotechnique de Poitiers" | 9     | 31    | 1         |
+| "École nationale supérieure d'ingénieurs de Caen"                        | 6     | 31    | 1         |
+| "École nationale supérieure de chimie de Rennes"                         | 5     | 28    | 1         |
+| "Université de Bordeaux"                                                 | 4     | 10    | 1         |
+| "Institut national des sciences appliquées de Rouen"                     | 4     | 37    | 1         |
+| "Université de la Nouvelle-Calédonie"                                    | 0     | 12    | 1         |
+--------------------------------------------------------------------------------------------------------
 
-##sélectionne les institutions communes avec l'autre groupe et donne le nombre de prix attribués à des femmes.
-SELECT ?institution (count(?institution) as ?count)
-FROM<result.ttl>
-FROM<graph-2.ttl>
+
+## Donne par région le ratio homme/femme des prix, avec le nombre d'actions de ces régions
+SELECT ?region (count(?female)/count(?male) as ?ratio) (count(?female) as ?prixF) (count(?male) as ?prixM) (count(distinct ?action) as ?nbActions)
+FROM <result.ttl>
+FROM <autregroupe.ttl>
 WHERE {
-	?x dbo:Place ?y .
-	?y foaf:name ?institution .
-	?a ?b ?c ;
-        foaf:gender  "Femmes" .
-	?c rdf:type dbo:EducationalInstitution ;
-	   foaf:name ?institution .
+	{
+		?action swpo:hasLocation ?x.
+		?x rdf:type dbo:EducationalInstitution;
+		   swpo:hasLocation ?y.
+		?y dbf:Region ?region.
+		
+		?a foaf:gender ?male;
+		   ?b ?c.
+		?c rdf:type dbo:EducationalInstitution;
+		   ?d ?e.
+		?e rdf:type  dbo:Region;
+		   foaf:name ?region.
+		
+		FILTER (?male = "Hommes").
+	}
+	UNION
+	{
+		?action swpo:hasLocation ?x.
+		?x rdf:type dbo:EducationalInstitution;
+		   swpo:hasLocation ?y.
+		?y dbf:Region ?region.
+		
+		?a foaf:gender ?female;
+		   ?b ?c.
+		?c rdf:type dbo:EducationalInstitution;
+		   ?d ?e.
+		?e rdf:type  dbo:Region;
+		   foaf:name ?region.
+		
+		FILTER (?female = "Femmes").
+	}
 }
-GROUP BY ?count ?institution
-ORDER BY DESC(?count)
+GROUP BY ?region
+ORDER BY DESC(?ratio)
+
+##Remarque: notre dataset contient les nouvelles régions tandis que la leur contient les vieilles, d'où de nombreux manques.
+-----------------------------------------------------------------------------------------
+| region                       | ratio                      | prixF | prixM | nbActions |
+=========================================================================================
+| "Île-de-France"              | 0.716740576496674057649667 | 12930 | 18040 | 10        |
+| "Provence-Alpes-Côte d'Azur" | 0.541226215644820295983086 | 768   | 1419  | 3         |
+| "Bretagne"                   | 0.517441860465116279069767 | 1246  | 2408  | 7         |
+| "Pays de la Loire"           | 0.479729729729729729729729 | 284   | 592   | 2         |
+-----------------------------------------------------------------------------------------
