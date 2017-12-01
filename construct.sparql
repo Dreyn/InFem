@@ -37,8 +37,8 @@ CONSTRUCT {
 FROM <fr-esr-initiatives-pour-la-lutte-contre-les-violences-sexistes-et-sexuelles_bis.csv>
 WHERE {
   BIND (URI(?UAI) AS ?URI)
-  BIND (URI(CONCAT("http://fr.dbpedia.org/page/", REPLACE(?NomEtab, ' ', '_'))) AS ?URI_Etab)
-  BIND (URI(CONCAT("http://dbpedia.org/page/", REPLACE(?Ville, ' ', '_'))) AS ?URI_Ville)
-  BIND (URI(CONCAT("http://fr.dbpedia.org/page/", REPLACE(?Departement, ' ', '_'))) AS ?URI_Departement)
-  BIND (URI(CONCAT("http://fr.dbpedia.org/page/", REPLACE(?Region, ' ', '_'))) AS ?URI_Region)
+  BIND (URI(CONCAT("http://fr.dbpedia.org/resource/", REPLACE(?NomEtab, ' ', '_'))) AS ?URI_Etab)
+  BIND (URI(CONCAT("http://dbpedia.org/resource/", REPLACE(?Ville, ' ', '_'))) AS ?URI_Ville)
+  BIND (URI(CONCAT("http://fr.dbpedia.org/resource/", REPLACE(?Departement, ' ', '_'))) AS ?URI_Departement)
+  BIND (URI(CONCAT("http://fr.dbpedia.org/resource/", REPLACE(?Region, ' ', '_'))) AS ?URI_Region)
 }
