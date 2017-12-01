@@ -29,5 +29,5 @@ CONSTRUCT {
 FROM <fr-esr-initiatives-pour-la-lutte-contre-les-violences-sexistes-et-sexuelles_bis.csv>
 WHERE {
   BIND (URI(?UAI) AS ?URI)
-  BIND (xsd:string(?Ville) AS ?VilleCC)
+  BIND (CONCAT('http://dbpedia.org/resource/', REPLACE(?Ville, ' ', '_')) AS ?VilleCC)
 }
