@@ -11,23 +11,34 @@ CONSTRUCT {
   ?URI a dbo:Event;
     foaf:name ?Dispositif;
     dbo:status ?Etat;
-    swpo:hasLocation [ 
-				rdf:type dbo:EducationalInstitution ;
-				foaf:name ?NomEtab;
-				swpo:hasLocation [ db:City ?VilleCC;
-									dbf:Departement ?Departement;
-									dbf:Region ?Region
-								]
-				];
+    swpo:hasLocation ?URI_Etab;
     foaf:Person [foaf:name ?Contact;
 				foaf:name ?Contact2;
 				foaf:email ?Email;
 				foaf:email ?AutreEmail;
 				foaf:website ?Site;
 				foaf:role ?Role].
+	
+  ?URI_Etab rdf:type dbo:EducationalInstitution ;
+    foaf:name ?NomEtab;
+    swpo:hasLocation [	db:City ?URI_Ville;
+						dbf:Departement ?URI_Departement;
+						dbf:Region ?URI_Region ].
+  
+  ?URI_Ville a db:City;
+	foaf:name ?Ville.
+
+  ?URI_Departement a dbf:Departement;
+	foaf:name ?Departement.
+	
+  ?URI_Region a dbf:Region;
+	foaf:name ?Region.
 }
 FROM <fr-esr-initiatives-pour-la-lutte-contre-les-violences-sexistes-et-sexuelles_bis.csv>
 WHERE {
   BIND (URI(?UAI) AS ?URI)
-  BIND (CONCAT('http://dbpedia.org/resource/', REPLACE(?Ville, ' ', '_')) AS ?VilleCC)
+  BIND (URI(CONCAT("http://fr.dbpedia.org/page/", REPLACE(?NomEtab, ' ', '_'))) AS ?URI_Etab)
+  BIND (URI(CONCAT("http://dbpedia.org/page/", REPLACE(?Ville, ' ', '_'))) AS ?URI_Ville)
+  BIND (URI(CONCAT("http://fr.dbpedia.org/page/", REPLACE(?Departement, ' ', '_'))) AS ?URI_Departement)
+  BIND (URI(CONCAT("http://fr.dbpedia.org/page/", REPLACE(?Region, ' ', '_'))) AS ?URI_Region)
 }
