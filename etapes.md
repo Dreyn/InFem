@@ -237,7 +237,8 @@ WHERE {
 		?action swpo:hasLocation ?x.
 		?x rdf:type dbo:EducationalInstitution;
 		   swpo:hasLocation ?y.
-		?y dbf:Region ?region.
+		?y dbf:Region ?r.
+		?r foaf:name ?region.
 		
 		?a foaf:gender ?male;
 		   ?b ?c.
@@ -253,7 +254,8 @@ WHERE {
 		?action swpo:hasLocation ?x.
 		?x rdf:type dbo:EducationalInstitution;
 		   swpo:hasLocation ?y.
-		?y dbf:Region ?region.
+		?y dbf:Region ?r.
+		?r foaf:name ?region.
 		
 		?a foaf:gender ?female;
 		   ?b ?c.
