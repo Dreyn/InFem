@@ -7,8 +7,8 @@
 @prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
 @prefix dbf:  <http://fr.dbpedia.org/resource/> .
 @prefix foaf:  <http://xmlns.com/foaf/0.1/> .
-@prefix owl: <>
-@prefix schema: <>
+@prefix owl: <http://www.w3.org/2002/07/owl#>
+@prefix schema: <http://schema.org/>
 @prefix void: <http://rdfs.org/ns/void#> .
 
 <0762762P>  rdf:type      dbo:Event ;
