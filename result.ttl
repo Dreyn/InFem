@@ -1015,5 +1015,5 @@ dbo:Place rdf:type owl:Class .
     rdfs:label "idunno";
     foaf:mbox <zurn13@hotmail.fr>.
     dcterms:source <https://data.enseignementsup-recherche.gouv.fr/explore/dataset/fr-esr-initiatives-pour-la-lutte-contre-les-violences-sexistes-et-sexuelles/table/?disjunctive.zone_geographique&sort=academie>;
-    dcterms:modified "2017-12-1"^^xsd:date;
+    dcterms:modified "2017-12-1"^^xsd:date .
     dcterms:subject <http://dbpedia.org/resource/Sexism>.
