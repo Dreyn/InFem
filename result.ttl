@@ -1008,7 +1008,7 @@ dbo:Place rdf:type owl:Class .
 :InFem a void:Dataset;
     dcterms:title "InFem";
     dcterms:description "RDF data from data.enseignementsup-recherche.gouv.fr about the initiatives against sexual and sexist violence in the French educational establishments.";
-    dcterms:contributor :Halaskaf;
+    dcterms:contributor :Hala Skaf;
     dcterms:publisher :Mica MENARD;
     dcterms:publisher :Robin WIBAUX;
     dcterms:publisher :Quentin LE GOUVELLO;
