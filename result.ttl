@@ -7,9 +7,8 @@
 @prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
 @prefix dbf:  <http://fr.dbpedia.org/resource/> .
 @prefix foaf:  <http://xmlns.com/foaf/0.1/> .
-@prefix owl: <http://www.w3.org/2002/07/owl#>
-@prefix schema: <http://schema.org/>.
-@prefix void: <http://rdfs.org/ns/void#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix schema: <http://schema.org/> .
 
 <0762762P>  rdf:type      dbo:Event ;
         dbo:status        "En cours" ;
@@ -1005,28 +1004,3 @@ dbo:Place rdf:type rdfs:Class .
 dbo:Place rdf:type rdfs:Resource .
 dbo:Place rdf:type owl:Class .
 
-:InFem a void:Dataset;
-    dcterms:title "InFem";
-    dcterms:description "RDF data from data.enseignementsup-recherche.gouv.fr about the initiatives against sexual and sexist violence in the French educational establishments.";
-    void:triples 51; 
-    dcterms:source <https://data.enseignementsup-recherche.gouv.fr/explore/dataset/fr-esr-initiatives-pour-la-lutte-contre-les-violences-sexistes-et-sexuelles/table/?disjunctive.zone_geographique&sort=academie>;
-    dcterms:modified "2017-12-1"^^xsd:date ;
-    dcterms:subject <http://dbpedia.org/resource/Sexism>
-    dcterms:contributor :"Hala Skaf";
-    dcterms:publisher :"Mica MENARD";
-    dcterms:publisher :"Robin WIBAUX";
-    dcterms:publisher :"Quentin LE GOUVELLO";
-    .
-:Halaskaf a foaf:Person;
-    foaf:name "Hala skaf"
-.
-:MicaMENARD a foaf:Person;
-    foaf:name "Mica MENARD"
-    foaf:mbox <mica.menard@etu.univ-nantes.fr>.
-:RobinWIBAUX a foaf:Person;
-    foaf:name "Robin WIBAUX"
-    foaf:mbox <robin.wibaux@etu.univ-nantes.fr>.
-:QuentinLEGOUVELLO a foaf:Person;
-    foaf:name "Quentin LE GOUVELLO"
-    foaf:mbox <quentin.le-gouvello-de-la-porte@etu.univ-nantes.fr>.
-    .
