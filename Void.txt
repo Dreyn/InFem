@@ -11,10 +11,10 @@
 	void:triples 51; 
     dcterms:source <https://data.enseignementsup-recherche.gouv.fr/explore/dataset/fr-esr-initiatives-pour-la-lutte-contre-les-violences-sexistes-et-sexuelles/table/?disjunctive.zone_geographique&sort=academie>;
     dcterms:created  "2017-11-30"^^xsd:date ;
-	dcterms:modified "2017-12-1"^^xsd:date ;
+    dcterms:modified "2017-12-1"^^xsd:date ;
     dcterms:subject <http://dbpedia.org/resource/Sexism>
     dcterms:contributor : Hala_Skaf;
-	dcterms:contributor :Univ_Nantes;
+    dcterms:contributor :Univ_Nantes;
     dcterms:publisher : Mica_MENARD;
     dcterms:publisher : Robin_WIBAUX;
     dcterms:publisher : Quentin_LEGOUVELLO;
