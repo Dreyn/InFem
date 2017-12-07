@@ -1004,3 +1004,40 @@ dbo:Place rdf:type rdfs:Class .
 dbo:Place rdf:type rdfs:Resource .
 dbo:Place rdf:type owl:Class .
 
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+
+_:InFem a void:Dataset;
+    dcterms:title "InFem";
+    dcterms:description "RDF data from data.enseignementsup-recherche.gouv.fr about the initiatives against sexual and sexist violence in the French educational establishments." ;
+    foaf:homepage <http://exinfem.fr/> ;
+	void:triples 51;
+    dcterms:source <https://data.enseignementsup-recherche.gouv.fr/explore/dataset/fr-esr-initiatives-pour-la-lutte-contre-les-violences-sexistes-et-sexuelles/table/?disjunctive.zone_geographique&sort=academie>;
+    dcterms:created  "2017-11-30"^^xsd:date ;
+    dcterms:modified "2017-12-1"^^xsd:date ;
+    dcterms:subject <http://dbpedia.org/resource/Sexism> ;
+    dcterms:contributor _:Hala_Skaf ;
+    dcterms:contributor _:Univ_Nantes ;
+    dcterms:publisher _:Mica_MENARD ;
+    dcterms:publisher _:Robin_WIBAUX ;
+    dcterms:publisher _:Quentin_LEGOUVELLO .
+
+
+_:Univ_Nantes a foaf:Organization ;
+             rdfs:label "Université de Nantes";
+             foaf:homepage <http://www.univ-nantes.fr>.
+
+_:Hala_skaf a foaf:Person ;
+    foaf:name "Hala skaf".
+_:Mica_MENARD a foaf:Person ;
+    rdfs:label "Mica MENARD" ;
+    foaf:mbox "mica.menard@etu.univ-nantes.fr".
+_:Robin_WIBAUX a foaf:Person ;
+    rdfs:label "Robin WIBAUX" ;
+    foaf:mbox "robin.wibaux@etu.univ-nantes.fr".
+_:Quentin_LEGOUVELLO a foaf:Person ;
+    rdfs:label "Quentin LE GOUVELLO";
+    foaf:mbox "quentin.le-gouvello-de-la-porte@etu.univ-nantes.fr".
