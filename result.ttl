@@ -9,6 +9,8 @@
 @prefix foaf:  <http://xmlns.com/foaf/0.1/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix schema: <http://schema.org/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix void: <http://rdfs.org/ns/void#> .
 
 <0762762P>  rdf:type      dbo:Event ;
         dbo:status        "En cours" ;
@@ -1003,12 +1005,6 @@ dbo:Place owl:equivalentClass dbo:Location .
 dbo:Place rdf:type rdfs:Class .
 dbo:Place rdf:type rdfs:Resource .
 dbo:Place rdf:type owl:Class .
-
-@prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix void: <http://rdfs.org/ns/void#> .
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix owl:  <http://www.w3.org/2002/07/owl#> .
 
 _:InFem a void:Dataset;
     dcterms:title "InFem";
